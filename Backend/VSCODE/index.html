@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS-CODE</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="left">
+            <h4>Vs- Code</h4>
+            <div id="line"></div>
+            <div class="fileicon">
+                <h5>Folder Name</h5>
+                <div class="icons">
+                    <i id="filecreate" class="ri-file-add-fill"></i>
+                    <i id="foldercreate" class="ri-folder-add-fill"></i>
+                    <i class="ri-restart-fill"></i>
+                </div>
+            </div>
+            <form id="fileform" action="/filecreate">
+                <input type="text" placeholder="filename">
+            </form>
+            <form id="folderform" action="/foldercreate">
+                <input type="text" placeholder="foldername">
+            </form>
+            <div class="files">
+                <div class="file">
+                    index.html
+                </div>
+                <div class="file">
+                    index.html
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <small>
+                Nothing Here
+            </small>
+        </div>
+    </div>
+
+    <script>
+        function turnOffBoth() {
+            var allele = [...document.querySelectorAll("form")];
+            allele.forEach(function (elem) {
+                elem.style.display = "none";
+            })
+        }
+        var filecreate = document.querySelector('#filecreate');
+        filecreate.addEventListener("click", function () {
+            turnOffBoth();
+            document.querySelector("#fileform").style.display = "initial"
+        })
+        var foldercreate = document.querySelector('#foldercreate');
+        foldercreate.addEventListener("click", function () {
+            turnOffBoth();
+            document.querySelector("#folderform").style.display = "initial"
+        })
+    </script>
+</body>
+
+</html>
