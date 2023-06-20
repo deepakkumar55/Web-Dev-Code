@@ -17,7 +17,7 @@ router.get('/create', function(req, res, next) {
   })
 });
 router.get('/find', function(req, res, next) {
-  userModel.findoNE().then(function(alluser){
+  userModel.findOne().then(function(alluser){
     res.send(alluser);
   })
 });
