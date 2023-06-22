@@ -26,5 +26,10 @@ router.get('/delete', function(req, res, next) {
     res.send(aluser);
   })
 });
+router.get('/update', function(req, res, next) {
+  userModel.findOneAndUpdate({_id: "6491d74f9bb8e8ede34b54ff"},{email:"dr434395@gmail.com"},{new:true} ).then(function(alupuser){
+    res.send(alupuser);
+  })
+});
 
 module.exports = router;
