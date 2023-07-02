@@ -22,9 +22,18 @@ router.get('/find', function(req, res, next) {
     res.render("feed",{alluser});
   })
 });
+router.get('/like/:id', function(req, res, next) {
+  userModel.findOne({_id: req.params.id})
+  .then(function(user){
+    user.like++;
+    user.save().then(function(){
+      res.redirect("back");
+    })
+  })
+});
 
 router.get('/delete/:id', function(req, res, next) {
-  userModel.findOneAndDelete({_id: req.params.id},)
+  userModel.findOneAndDelete({_id: req.params.id})
   .then(function(){
     res.redirect("back");
   })

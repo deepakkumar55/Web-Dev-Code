@@ -15,7 +15,7 @@
                   <h2 class="card-title"><%= userdets.name %></h5>
                   <h5 class="card-title"><%= userdets.username %></h5>
                   <h6 class="card-title"><%= userdets.age %></h5> 
-                    <small>Like 0</small>
+                    <small>Like <%= userdets.like %></small>
                     <br>
                   <a href="/delete/<%= userdets._id %>" class="btn btn-danger">delete</a>
                   <a href="/like/<%= userdets._id %>" class="btn btn-success">Like</a>
