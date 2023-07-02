@@ -6,7 +6,7 @@ const userModel = require("./users")
 router.get('/', function(req, res, next) {
   res.render('index');
 });
-router.post('/create', function(req, res, next) {
+router.get('/create', function(req, res, next) {
   userModel.create({
     username:req.body.username,
     name:req.body.name,
