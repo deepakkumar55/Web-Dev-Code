@@ -7,7 +7,11 @@ const userSchema = mongoose.Schema({
   name:String,
   username:String,
   age:Number,
-  image:String
+  image:String,
+  like:{
+    type:Number,
+    default:0
+  }
 
 })
 module.exports = mongoose.model("user",userSchema);
