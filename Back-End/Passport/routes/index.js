@@ -14,7 +14,7 @@ router.get('/logout', function(req, res, next) {
   req.logout();
   res.redirect('/')
 });
-router.get('/register', function(req, res, next) {
+router.post('/register', function(req, res, next) {
   var newUser=new userModel({
     username:req.body.username,
     email:req.body.email,
