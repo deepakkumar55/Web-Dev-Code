@@ -1,0 +1,22 @@
+<% include ./partials/header.ejs %>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html,body{
+        height: 100%;
+        width: 100%;
+    }
+</style>
+
+<form class="h-100 w-100 d-flex align-items-center justify-content-center flex-column" action="/createpost" method="post">
+    <input type="text" class="form-control w-25" placeholder="Enter Caption" name="caption">
+    <input type="text" class="form-control w-25" placeholder="Enter image" name="image">
+    <input type="submit" class="btn btn-success" value="Creat Post">
+</form>
+
+
+
+<% include ./partials/footer.ejs %>

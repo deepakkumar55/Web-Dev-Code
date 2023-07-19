@@ -1,0 +1,31 @@
+
+<% include ./partials/header.ejs %>
+<div class="container p-4">
+  <h3>Update Details</h3>
+  <form action="/update/<%= user._id %> " method="post">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Username</label>
+      <input type="text" value="<%= user.username %>" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">name</label>
+      <input type="text" value="<%= user.name %>" name="name" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">email</label>
+      <input type="text" value="<%= user.email %>" name="email" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">image</label>
+      <input type="text" value="<%= user.image %>" name="image" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" value="<%= user.password %>" name="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    
+    <br>
+    <button type="submit" class="btn btn-primary">Update Details</button>
+  </form>
+</div>
+<% include ./partials/footer.ejs %>

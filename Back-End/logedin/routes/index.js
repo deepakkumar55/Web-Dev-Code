@@ -36,6 +36,7 @@ router.post('/login',passport.authenticate('local',{
 router.get('/login', function(req, res, next) {
   res.render('login');
 });
+
 function isLoggedIn(req,res,next){
   if (req.isAuthenticated()) {
   return next();
@@ -50,6 +51,20 @@ router.get('/profile',isLoggedIn, function(req, res, next) {
   })
 });
 
-
+router.get('/logout', function(req, res, next) {
+  if (req.isAuthenticated()) {
+    req.logOut((err) => {
+      if(err){
+        res.send(err);
+      }
+      else{
+        res.redirect('/login')
+      }
+    })
+    }   
+  else{
+    res.redirect('/login')
+  }
+})
 
 module.exports = router;

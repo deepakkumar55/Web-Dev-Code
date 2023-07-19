@@ -1,0 +1,31 @@
+<% include ./partials/header.ejs %>
+  <div class="container">
+    <% posts.forEach(post=>{ %>
+      <div class="card" style="width: 18rem;">
+        <img src="<%= post.image %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          
+          <div class="d-flex align-items-center g-4">
+            <img src="<%= post.owner.image %>" height="30px" width="30px" style="border-radius: 50%;" alt="">
+            <p class="m-0">
+              <%= post.owner.username %>
+            </p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title">
+              <%= post.caption %>
+            </h5>
+            <a href="/postlike/<%= post._id %>" class="btn btn-success">
+              likes<%= post.likes.length  %>
+            </a>
+          </div>
+          <!-- <h5 class="card-title"><%= post.name %></h5>
+          <a class="nav-link" href="mailto:<%= post.email %>"><%= post.email %></a><br>
+          <a href="/profile/<%= post._id %>" class="btn btn-primary">Vist Profile</a>
+          <a href="/Edit/<%= post._id %>" class="btn btn-warning">Edit Profile</a>
+          <a href="/Delete/<%= post._id %>" class="btn btn-danger">Delete Profile</a> -->
+        </div>
+        <% }) %>
+      </div>
+  </div>
+  <% include ./partials/footer.ejs %>

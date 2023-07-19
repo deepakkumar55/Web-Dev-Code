@@ -1,0 +1,15 @@
+<% include ./partials/header.ejs %>
+<div class="container d-flex">
+    <div class="card" style="width: 18rem;">
+        <img src="<%= user.image %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= user.username %></h5>
+          <h5 class="card-title"><%= user.name %></h5>
+          <h5 class="card-title"></h5>
+          <a class="nav-link" href="mailto:<%= user.email %>"><%= user.email %></a><br>
+          <a href="/feed" class="btn btn-primary">Go Feed</a>
+          <a href="/createpost" class="btn btn-success">Create Post</a>
+        </div>
+      </div>
+</div>
+<% include ./partials/footer.ejs %>
