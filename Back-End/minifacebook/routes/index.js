@@ -1,12 +1,12 @@
 var express = require("express");
 var router = express.Router();
 var usersModel = require("./users");
+var commentModel = require("./comments");
 var postModel = require("./post");
 var localStorage = require("passport-local");
 const passport = require("passport");
 passport.use(new localStorage(usersModel.authenticate()));
 
-/* GET home page. */
 router.get("/", function (req, res, next) {
   res.render("index");
 });
