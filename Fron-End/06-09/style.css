@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#background {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+#background video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#nav {
+    position: absolute;
+    background-color: red;
+    height: 100px;
+    width: 100%;
+}

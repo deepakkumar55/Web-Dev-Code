@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#background {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+#nav-bar {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-part1 {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    padding-left: 2.5%;
+    padding-top: 1%;
+    font-size: 20px;
+    gap: 3%;
+}
+
+#nav-part1 i {
+    font-size: 30px;
+}
+
+#nav-part2 {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    gap: 15%;
+    padding-top: 1%;
+    padding-left: 23%;
+}
+
+#cart {
+    display: flex;
+    gap: 1px;
+    font-size: 20px;
+    padding-top: 2%;
+
+}
+
+#cart>p {
+    position: absolute;
+    border: 2px solid black;
+    padding: 2px;
+    border-radius: 50px;
+    left: 84.5%;
+    top: 38%;
+    font-size: 15px;
+    background-color: #000;
+    color: white;
+}
+
+#line-div {
+    width: 100px;
+    height: 5%;
+    border: 2px solid black;
+    margin: 5%;
+}
+
+#nav-part2 i {
+    font-size: 30px;
+}
+
+#main {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+#main1 {
+    position: relative;
+    width: 25%;
+    height: 100vh;
+}
+
+#main1 h1 {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    left: 12%;
+    font-size: 40px;
+    letter-spacing: 6px;
+    font-weight: 500;
+}
+
+#main1 p {
+    position: absolute;
+    top: 36%;
+    right: 10%;
+    left: 12%;
+    line-height: 25px;
+}
+
+#main1 button {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    left: 12%;
+    padding: 4% 5%;
+    background: transparent;
+    font-style: oblique;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+#share {
+    position: absolute;
+    display: flex;
+    right: 10%;
+    left: 12%;
+    top: 86%;
+    gap: 15px;
+}
+
+#share i {
+    font-size: 25px;
+}
+
+#share p {
+    position: absolute;
+    font-size: 23px;
+    top: 5%;
+
+}
+
+#main2 {
+    width: 75%;
+    height: 100vh;
+}
+
+#main2-nav {
+    position: absolute;
+    position: relative;
+    width: 100%;
+    height: 10%;
+}
+
+#main2-nav h4 {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    font-weight: 100;
+    font-style: oblique;
+    letter-spacing: 30px;
+}
+
+#main2-nav h2 {
+    position: absolute;
+    top: 40%;
+    left: 42%;
+    letter-spacing: 25px;
+}
+
+#main2-div {
+    height: 100%;
+    overflow-x: auto;
+}
+
+#image-div {
+    display: flex;
+    height: 100%;
+    width: 300%;
+    gap: 2%;
+    z-index: 999999999999999999;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+
+.img-div {
+    position: relative;
+    height: 50%;
+    width: 30%;
+    border-radius: 10px;
+    top: 10%;
+    border: 1px solid black;
+}
+
+.img-div:hover {
+    position: relative;
+    height: 55%;
+    width: 35%;
+    border-radius: 10px;
+    top: 15%;
+    border: 1px solid black;
+}
+
+.img-container {
+    position: relative;
+    border-radius: 10px;
+    height: 50%;
+    width: 30%;
+    border: 1px solid black;
+    top: 20%;
+}
+
+.img-container:hover {
+    position: relative;
+    border-radius: 10px;
+    height: 55%;
+    width: 35%;
+    border: 1px solid black;
+    top: 15%;
+}
+
+.img-div>img {
+    position: absolute;
+    bottom: 0%;
+    height: 130%;
+}
+
+.img-container>img {
+    position: absolute;
+    bottom: 0%;
+    height: 150%;
+}
+
+#img1 {
+    background-color: rgba(255, 255, 255, 0.466);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-image: url(https://i.guim.co.uk/img/static/sys-images/Environment/Pix/columnists/2013/7/12/1373631755998/beech-leaf-006.jpg?width=620&quality=85&auto=format&fit=max&s=c43a340301395a149b635bc1e100a502);
+
+}
+
+#img1>img {
+    object-fit: cover;
+    height: 120%;
+    width: 60%;
+}
+
+#img2 {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: soft-light;
+    background-image: url(https://i.pinimg.com/564x/83/c8/78/83c87892373f22989b1884097e896604.jpg);
+}
+
+#img3 {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: soft-light;
+    background-image: url(https://i.pinimg.com/564x/23/6b/8d/236b8d74de7e0590c9e89f87e69ac98c.jpg);
+}
+
+#img4 {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: soft-light;
+    background-image: url(https://i.pinimg.com/564x/10/f9/c6/10f9c6e7540913b7dd4ec2ca31f33c40.jpg);
+}
+
+#img5 {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: soft-light;
+    background-image: url(https://i.pinimg.com/564x/cf/fd/8e/cffd8e57825a8202906d4ae432990787.jpg);
+}
+
+#img6 {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: soft-light;
+    background-image: url(https://i.pinimg.com/564x/6e/f4/76/6ef476e55117a81f94f5bbaad7b23aa9.jpg);
+}
+
+#img7 {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: soft-light;
+    background-image: url(https://images.pexels.com/photos/2860870/pexels-photo-2860870.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+}
+
+#img8 {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: soft-light;
+    background-image: url(https://i.pinimg.com/564x/90/21/1b/90211bb269d947104636e4129716f37b.jpg);
+}

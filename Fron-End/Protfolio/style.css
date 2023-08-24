@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+}
+#background{
+    width: 100%;
+}
+#Home{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+#nav{
+    z-index: 9;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    display: flex;
+
+}
+#nav-left{
+    min-height: 100%;
+    width: 35%;
+
+}
+#nav-right{
+    position: relative;
+    min-height: 100%;
+    width: 65%;
+    margin-right: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#nav-right a{
+    color: black;
+    text-decoration: none;
+    margin-left: 5%;
+    font-size: 1.8vw;
+    font-weight: 900;
+    transition: 1s;
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow: 1px 2px 1px red;
+    
+}
+#nav-right a:hover{
+    box-shadow: -1px -2px  1px red;
+    filter: drop-shadow(2px 1px 5px #fff);
+}
+#Home-main{
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+#Home-left{
+    position: relative;
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    flex-direction: column;
+}
+#Home-left h1{
+    font-size: 6vw;
+    color: orange;
+    transition: 1s;
+}
+#Home-left h2{
+    transition: 1s;
+    font-size: 5vw;
+    color: black;
+}
+#Home-left h2 span{
+    color: orange;
+}
+#Home-left h3{
+    transition: 1s;
+    font-size: 3vw;
+    color: red;
+}
+#Home-right {
+    min-height: 100vh;
+    transition: 1s;
+    width: 50%;
+    position: relative;
+    
+}
+
+#Home-right #img{
+    height: 70%;
+    width: 50%;
+    position: absolute;
+    background-color: black;
+    border-radius: 40% 40% 5% 5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%,-50%);
+}
+#About{
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+#About-left{
+    position: relative;
+    width: 50%;
+    min-height: 100%;
+
+}
+#About-right{
+    position: relative;
+    width: 50%;
+    min-height: 100%;
+
+}
+#About-left #img{
+    height: 70%;
+    width: 50%;
+    position: absolute;
+    background-color: black;
+    border-radius: 40% 40% 5% 5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-80%,-50%);
+}
+#About-right h1{
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vw;
+    filter: drop-shadow(20px 20px 5px black);
+}
+#About-right p{
+    margin-right: 10%;
+    text-align: center;
+    font-size: 1.5vw;
+}
+#Details{
+    display: flex;
+    width: 100%;
+    min-height: 60vh;
+}
+#rleft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 50%;
+    min-height: 60vh;
+}
+#rleft h2{
+    font-size: 30px;
+    margin-top: 15%;
+}
+#rright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    margin-right: 10%;
+    margin-left: 10%;
+    min-height: 60vh;
+}
+#rright h3{
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 15%;
+}
+#About button{
+    background-color: orange;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin: 2% 35%;
+    cursor: pointer;
+    font-weight: 900;
+}
+#Resume{
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+#Resume>h1{
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 6vw;
+    filter: drop-shadow(20px 20px 5px black);
+}
+#Resume-left{
+    min-height: 80vh;
+    position: relative;
+    width: 50%;
+}
+#Resume-midle{
+    position: relative;
+    height: 80vh;
+    width: 10px;
+    position: absolute;
+    top: 55%;
+    border-radius: 20px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: black;
+}
+#Resume-right{
+    position: relative;
+    min-height: 80vh;
+    width: 50%;
+}
+#Resume-midle #Point{
+    width: 10px;
+    height: 10px;
+    margin-top: 170px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+#Resume-midle #Point:nth-child(1){
+    margin-top: 70px;
+}
+#University{
+    position: absolute;
+    top: 30%;
+    width: 80%;
+    line-height: 1.2;
+    left: 65%;
+    transform: translate(-50%,-50%);
+}
+#University h1{
+    font-size: 3.5vw;
+}
+#University h2{
+    font-size: 25px;
+    margin-left: 2vw;
+}
+#University li{
+    margin-left: 40px;
+    font-size: 1.5vw;
+}
+#Matric{
+    position: absolute;
+    top: 85%;
+    left: 60%;
+    width: 70%;
+    transform: translate(-50%,-50%);
+}
+#Matric h1{
+    font-size: 3.5vw;
+}
+#Matric h2{
+    font-size: 2vwx;
+    margin-left: 20px;
+}
+#Matric li{
+    margin-left: 40px;
+    font-size: 1.5vw;
+}
+#Inter{
+    position: absolute;
+    top: 55%;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#Inter h1{
+    font-size: 3.5vw;
+}
+#Inter h2{
+    font-size: 2vw;
+    margin-left: 20px;
+}
+#Inter li{
+    margin-left: 40px;
+    font-size: 1.5vw;
+}
+
+
+
+
+#Skills{
+    display: flex;
+    position: relative;
+    min-height: 120vh;
+    width: 100%;
+}
+#Skills h1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    font-size: 6vw;
+    filter: drop-shadow(20px 20px 5px black);
+}
+#Slide-Skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    top: 60%;
+    width: 100%;
+    transform: translate(0%,50%);
+    height: 70vh;
+}
+
+#Skills-Slide{
+    background-color: red;
+    width: 30vw;
+    border-radius: 3vw;
+    height: 30vw;
+    margin-left: 1%;
+    box-shadow: 1px 1px 5px white;
+    filter: drop-shadow(20px 20px 10px black);
+}
+
+
+
+
+
+#Project{
+    position: relative;
+    min-height: 120vh;
+    width: 100%;
+}
+
+#Project h1{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%,-50%);
+    font-size: 6vw;
+    filter: drop-shadow(20px 20px 5px black);
+}
+#Slide-Project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 60%;
+    width: 100%;
+    transform: translate(0%,50%);
+    height: 70vh;
+}
+
+#Slide-Project::-webkit-scrollbar  {
+    display: none
+}
+#Project-Slide{
+    background-color: red;
+    width: 50vw;
+    border-radius: 3vw;
+    box-shadow: 1px 1px 5px white;
+    height: 65vh;
+    margin-left: 1%;
+    filter: drop-shadow(20px 20px 10px black);
+}
+
+#Contact{
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+#Contact h1{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 6vw;
+    filter: drop-shadow(20px 20px 5px black);
+    font-size: 6vw;
+    filter: drop-shadow(20px 20px 5px black);
+}

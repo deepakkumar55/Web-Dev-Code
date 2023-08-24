@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-color: black;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+}
+
+#part1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: #d6b7b5;
+
+}
+
+#part2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: #E3CCC7;
+}
+
+.raaj {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.ar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.cen {
+    position: relative;
+    width: 40%;
+    height: 50%;
+    background-image: url(https://images.unsplash.com/photo-1560343776-97e7d202ff0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80);
+    overflow: hidden;
+    background-size: cover;
+
+
+
+}
+
+#p {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+}
+
+.cen1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://i.pinimg.com/564x/0e/4a/e3/0e4ae38d4b02044bfe8c10c023f44843.jpg);
+    top: 100%;
+    background-size: cover;
+    animation: raaj 2s cubic-bezier(0.19, 1, 0.22, 1) 2s infinite both;
+}
+
+.cen2 {
+    position: relative;
+    width: 40%;
+    height: 50%;
+    background-image: url(https://i.pinimg.com/564x/07/3e/8d/073e8d426dfe196ff3e40e76847bf934.jpg);
+    overflow: hidden;
+    background-size: cover;
+
+
+
+}
+
+#t1 {
+    position: absolute;
+    /* background-color: red; */
+    z-index: 9;
+    top: 5%;
+    left: 5%;
+
+}
+
+#t1 h5 {
+    font-size: 15px;
+    font-weight: 100;
+}
+
+#t1 h2 {
+    font-family: "Harrington";
+    font-size: 50px;
+    font-weight: 5000;
+}
+
+.cen3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://i.pinimg.com/564x/ee/3c/1d/ee3c1d1bc7a58606e29f913d2f0d4d63.jpg);
+    top: 100%;
+    background-size: cover;
+    animation: raaaj 2s cubic-bezier(0.19, 1, 0.22, 1) 2s infinite both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes raaj {
+    0% {
+        top: 100%;
+        height: 100%;
+    }
+
+    50% {
+        top: 0%;
+        height: 100%;
+
+    }
+
+    100% {
+        top: 0%;
+        height: 0%;
+    }
+}
+
+@keyframes raaaj {
+    100% {
+        top: 100%;
+        height: 100%;
+    }
+
+    50% {
+        top: 0%;
+        height: 100%;
+
+    }
+
+    0% {
+        top: 0%;
+        height: 0%;
+    }
+}

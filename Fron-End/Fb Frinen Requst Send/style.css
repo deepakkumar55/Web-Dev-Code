@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#background {display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    gap: 20px;
+}
+
+
+
+.card {
+    position: relative;
+    height: 80%;
+    width: 30%;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 2px 2px 25px black;
+}
+
+.img {
+    position: relative;
+    overflow: hidden;
+    height: 50%;
+    width: 100%;
+    background-color: red;
+
+}
+
+.img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card1 {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card1 h1 {
+    font-size: 40px;
+}
+
+.card1 h4 {
+    margin-top: 5px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    opacity: .5;
+    font-weight: 500;
+}
+
+.card1 p {
+    margin-top: 10px;
+    font-size: 20px;
+    opacity: .8;
+    font-weight: 900;
+    width: 80%;
+    text-align: center;
+}
+
+.card1 button {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 25px;
+    padding: 5px 20px;
+    color: green;
+    border: none;
+    border-radius: 20px;
+    filter: drop-shadow(10px 10px 15px rgb(0, 128, 0));
+    background-color: rgb(200, 243, 200);
+}

@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+
+    padding: 0;
+    box-sizing: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: blanchedalmond;
+
+}
+
+#main {
+    border-radius: 10px;
+    position: relative;
+    height: 90%;
+    width: 35%;
+    background-color: #fff;
+    border: 1px solid rgb(5, 0, 0);
+    box-shadow: 5px 10px 30px 5px black;
+}
+
+#nav {
+    cursor: pointer;
+    position: relative;
+    margin-top: 4%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.466);
+    display: flex;
+    gap: 2%;
+    height: 50px;
+    width: 100%;
+}
+
+#nav img {
+    position: absolute;
+    top: -20%;
+    left: 3%;
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+#nav h4 {
+    position: absolute;
+    left: 15%;
+    font-size: 20px;
+    top: 20%;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+#nav i {
+    position: absolute;
+    left: 88%;
+    top: 10%;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+#nav button {
+    position: absolute;
+    left: 58%;
+    top: 22%;
+    font-weight: 900;
+    font-size: 11px;
+    padding: 1% 5%;
+    border-radius: 50px;
+    background-color: royalblue;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+#img-div {
+    cursor: pointer;
+    background-color: red;
+    display: flex;
+    position: relative;
+    height: 70%;
+    width: 100%;
+}
+
+#img1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#img2 {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#img3 {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#img4 {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#img-div i {
+    z-index: 999;
+    cursor: pointer;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+#img-div .ri-arrow-right-s-line {
+    position: absolute;
+    top: 45%;
+    right: 1%;
+
+}
+
+#img-div .ri-arrow-left-s-line {
+    position: absolute;
+    top: 45%;
+    left: 1%;
+    display: none;
+}
+
+#like {
+    height: 9%;
+    display: flex;
+    cursor: pointer;
+}
+
+#like i {
+    margin-top: 2%;
+    font-size: 25px;
+    margin-left: 15px;
+
+}
+
+#like .ri-heart-fill {
+    color: white;
+    text-shadow: 2px 0 black,
+        -2px 0 black,
+        0 2px black,
+        0 -2px black,
+        1px 1px black,
+        -1px -1px black,
+        -1px 1px black,
+        1px -1px black;
+}
+
+#like .ri-bookmark-fill {
+    position: absolute;
+    right: 3%;
+    color: white;
+    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;
+
+}
+
+#like-count {
+    height: 6%;
+}
+
+#like-count h3 {
+    padding-left: 5%;
+    color: rgba(0, 0, 0, 0.904);
+    font-weight: 90000;
+    font-size: 18px;
+
+}
+
+#img5 {
+    display: none;
+    position: absolute;
+    height: 70px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1000px) {
+    #background {
+        background-color: red;
+    }
+
+    #main {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    #background {
+        background-color: red;
+    }
+
+    #main {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 100px) {
+    #background {
+        background-color: red;
+    }
+
+    #main {
+        width: 70%;
+        height: 70%;
+    }
+}

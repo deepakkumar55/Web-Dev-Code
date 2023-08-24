@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-color: black;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    background-image: linear-gradient(to top right, red, white, yellow);
+    height: 100%;
+    width: 100%;
+}
+
+#main1 {
+    position: relative;
+    background-color: white;
+    height: 80%;
+    width: 80%;
+    border-radius: 30px;
+    top: 10%;
+    left: 10%;
+
+}
+
+h1:hover {
+    cursor: pointer;
+}
+
+h2:hover {
+    cursor: pointer;
+}
+
+h6:hover {
+    cursor: pointer;
+}
+
+h4:hover {
+    cursor: pointer;
+}
+
+p:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#nav {
+    position: relative;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: .001px solid red;
+}
+
+#nav1 img {
+    position: absolute;
+    height: 80%;
+    top: 15%;
+    left: 5%;
+}
+
+#nav1 h2 {
+    font-size: 22px;
+    color: rgb(255, 0, 0);
+    font-family: "Monotype Corsiva";
+    font-weight: 800;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    letter-spacing: 5px;
+}
+
+#nav2 {
+    align-items: center;
+    padding: 6% 5%;
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+}
+
+#nav2 h2 {
+    color: darkblue;
+}
+
+#main2 {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#img {
+    width: 50%;
+    height: 100%;
+}
+
+#text {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+#img img {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 1%;
+    left: 48%;
+}
+
+#text h1 {
+    position: absolute;
+    font-size: 70px;
+    color: darkblue;
+    top: 5%;
+    left: 8%;
+    font-weight: 690;
+}
+
+#text h4 {
+    position: absolute;
+    font-size: 32px;
+    color: red;
+    top: 24%;
+    left: 8%;
+    font-weight: 200;
+}
+
+#text p {
+    color: rgb(0, 4, 247);
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    padding: 0% 5%;
+}
+
+#last {
+    display: flex;
+    color: white;
+    position: relative;
+    top: 80%;
+    left: 12%;
+    gap: 40px;
+}
+
+#last button {
+    padding: 1% 7%;
+    border: 2px solid red;
+    background-color: red;
+    border-radius: 30px;
+}
+
+#last h6 {
+    color: darkblue;
+    font-size: 25px;
+}

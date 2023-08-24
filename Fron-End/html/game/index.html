@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <body>
+    <audio class="audio" id ="goo">
+<source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Korobeiniki.ogg/Korobeiniki.ogg.mp3" >
+</audio>
+        <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+        <script>
+            let Page = {
+  IsSetup: !1,
+  body: document.getElementsByTagName("body")[0],
+  cvs: document.createElement("canvas"),
+  ctx: 0,
+  unitSize: 0,
+  AreaArr: [],
+  WindowChanged: function () {
+    let t = document.documentElement.clientWidth,
+      e = document.documentElement.clientHeight,
+      i = (t - (t % 80)) / 16,
+      r = (e - (e % 100)) / 20,
+      s = Math.max(Math.min(i, r), 20);
+    this.unitSize = s;
+    let a = 0,
+      n = 0;
+    for (let t = 0; t < Page.AreaArr.length; t++) {
+      Page.AreaArr[t].CalculateBounds();
+      let e = Page.AreaArr[t].left + Page.AreaArr[t].W,
+        i = Page.AreaArr[t].top + Page.AreaArr[t].H;
+      (a = Math.max(e, a)), (n = Math.max(i, n));
+    }
+    (this.cvs.width = a), (this.cvs.height = n);
+    let h = (e - n) / 2,
+      o = t / 2 - this.Game.W / 2,
+      l = t - (o + a) - 0.5 * this.unitSize;
+    l < 0 && (o = Math.max(0.5 * this.unitSize, o + l)),
+      (this.cvs.style.left = o + "px"),
+      (this.cvs.style.top = h + "px");
+  },
+  Initialize: function () {
+    !1 === this.IsSetup &&
+      (document.body.appendChild(Page.cvs),
+      (this.body.style.overflow = "hidden"),
+      (this.body.style.backgroundColor = "rgb(25,26,26)"),
+      (this.cvs.style.position = "absolute"),
+      (this.ctx = this.cvs.getContext("2d")),
+      (this.IsSetup = !0)),
+      this.WindowChanged();
+    for (let t = 0; t < Page.AreaArr.length; t++) Page.AreaArr[t].IsDirty = !0;
+  },
+  Update: function () {
+    for (let t = 0; t < Page.AreaArr.length; t++)
+      Page.AreaArr[t].IsDirty &&
+        (Page.AreaArr[t].Draw(), (Page.AreaArr[t].IsDirty = !1));
+  }
+};
+function DrawAreaObj(t, e, i, r, s) {
+  (this.leftBase = t),
+    (this.topBase = e),
+    (this.widthBase = i),
+    (this.heightBase = r),
+    (this.left = 0),
+    (this.top = 0),
+    (this.W = 0),
+    (this.H = 0),
+    (this.IsDirty = !1),
+    (this.CalculateBounds = function () {
+      (this.left = this.leftBase * Page.unitSize),
+        (this.top = this.topBase * Page.unitSize),
+        (this.W = this.widthBase * Page.unitSize),
+        (this.H = this.heightBase * Page.unitSize),
+        (this.IsDirty = !0);
+    }),
+    (this.Draw = s),
+    Page.AreaArr.push(this);
+}
+(Page.Game = new DrawAreaObj(0, 0, 10, 20, function () {
+  let t,
+    e,
+    i = Page.unitSize - 2;
+  (Page.ctx.fillStyle = "rgb(35,36,38)"),
+    Page.ctx.fillRect(this.left, this.top, this.W, this.H);
+  for (let r = 0; r < GM.StaticUnits.length; r++)
+    for (let s = 0; s < GM.StaticUnits[r].length; s++) {
+      let a = GM.StaticUnits[r][s];
+      0 !== a &&
+        ((t = r * Page.unitSize + 1),
+        (e = s * Page.unitSize + 1),
+        (Page.ctx.fillStyle = GM.IsAlive ? a : "rgb(35,36,38)"),
+        Page.ctx.fillRect(t, e, i, i));
+    }
+  if (0 !== GM.Pc.Cur && GM.IsAlive) {
+    let r = ColorWithAlpha(GM.Pc.Cur.color, 0.1);
+    for (let s = 0; s < GM.Pc.Cur.UO.arr.length; s++)
+      (t = (GM.Pc.Cur.x + GM.Pc.Cur.UO.arr[s].x) * Page.unitSize + 1),
+        (e = (GM.Pc.Cur.y + GM.Pc.Cur.UO.arr[s].y) * Page.unitSize + 1),
+        (Page.ctx.fillStyle = GM.Pc.Cur.color),
+        Page.ctx.fillRect(t, e, i, i),
+        GM.IsAlive &&
+          0 !== GM.Pc.ProjY &&
+          ((e += GM.Pc.ProjY * Page.unitSize),
+          (Page.ctx.fillStyle = r),
+          Page.ctx.fillRect(t, e, i, i));
+  }
+  GM.IsAlive ||
+    DrawText(
+      "U R DED",
+      "rgb(255,255,255)",
+      "500",
+      "center",
+      i,
+      this.W / 2,
+      this.H / 2
+    );
+})),
+  (Page.UpcomingA = new DrawAreaObj(10.5, 2.6, 2.5, 2.5, function () {
+    let t = Math.floor(Page.unitSize / 2),
+      e = GM.Pc.Upcoming[0];
+    if (
+      ((Page.ctx.fillStyle = "rgb(35,36,38)"),
+      Page.ctx.fillRect(this.left, this.top, this.W, this.H),
+      0 !== e)
+    ) {
+      Page.ctx.fillStyle = e.color;
+      let i = 0,
+        r = 0,
+        s = [],
+        a = [];
+      for (let t = 0; t < e.UO.arr.length; t++) {
+        let n = e.UO.arr[t].x,
+          h = e.UO.arr[t].y;
+        s.indexOf(n) < 0 && (s.push(n), (i += n)),
+          a.indexOf(h) < 0 && (a.push(h), (r += h));
+      }
+      let n = t * (i / s.length + 0.5),
+        h = t * (r / a.length + 0.5),
+        o = this.left + this.W / 2,
+        l = this.top + this.H / 2;
+      console.log(n + ", " + h);
+      for (let i = 0; i < e.UO.arr.length; i++) {
+        let r = Math.floor(o - n + e.UO.arr[i].x * t),
+          s = Math.floor(l - h + e.UO.arr[i].y * t);
+        Page.ctx.fillRect(r, s, t - 1, t - 1);
+      }
+    }
+  })),
+  (Page.UpcomingB = new DrawAreaObj(10.5, 5.2, 2.5, 2.5, function () {
+    let t = Math.floor(Page.unitSize / 2),
+      e = GM.Pc.Upcoming[1];
+    if (
+      ((Page.ctx.fillStyle = "rgb(35,36,38)"),
+      Page.ctx.fillRect(this.left, this.top, this.W, this.H),
+      0 !== e)
+    ) {
+      Page.ctx.fillStyle = e.color;
+      let i = 0,
+        r = 0,
+        s = [],
+        a = [];
+      for (let t = 0; t < e.UO.arr.length; t++) {
+        let n = e.UO.arr[t].x,
+          h = e.UO.arr[t].y;
+        s.indexOf(n) < 0 && (s.push(n), (i += n)),
+          a.indexOf(h) < 0 && (a.push(h), (r += h));
+      }
+      let n = t * (i / s.length + 0.5),
+        h = t * (r / a.length + 0.5),
+        o = this.left + this.W / 2,
+        l = this.top + this.H / 2;
+      console.log(n + ", " + h);
+      for (let i = 0; i < e.UO.arr.length; i++) {
+        let r = Math.floor(o - n + e.UO.arr[i].x * t),
+          s = Math.floor(l - h + e.UO.arr[i].y * t);
+        Page.ctx.fillRect(r, s, t - 1, t - 1);
+      }
+    }
+  })),
+  (Page.UpcomingC = new DrawAreaObj(10.5, 7.8, 2.5, 2.5, function () {
+    let t = Math.floor(Page.unitSize / 2),
+      e = GM.Pc.Upcoming[2];
+    if (
+      ((Page.ctx.fillStyle = "rgb(35,36,38)"),
+      Page.ctx.fillRect(this.left, this.top, this.W, this.H),
+      0 !== e)
+    ) {
+      Page.ctx.fillStyle = e.color;
+      let i = 0,
+        r = 0,
+        s = [],
+        a = [];
+      for (let t = 0; t < e.UO.arr.length; t++) {
+        let n = e.UO.arr[t].x,
+          h = e.UO.arr[t].y;
+        s.indexOf(n) < 0 && (s.push(n), (i += n)),
+          a.indexOf(h) < 0 && (a.push(h), (r += h));
+      }
+      let n = t * (i / s.length + 0.5),
+        h = t * (r / a.length + 0.5),
+        o = this.left + this.W / 2,
+        l = this.top + this.H / 2;
+      console.log(n + ", " + h);
+      for (let i = 0; i < e.UO.arr.length; i++) {
+        let r = Math.floor(o - n + e.UO.arr[i].x * t),
+          s = Math.floor(l - h + e.UO.arr[i].y * t);
+        Page.ctx.fillRect(r, s, t - 1, t - 1);
+      }
+    }
+  })),
+  (Page.ScoreBarHigh = new DrawAreaObj(10.5, 0, 4.5, 1, function () {
+    let t, e, i, r, s;
+    (Page.ctx.fillStyle = "rgb(35,36,38)"),
+      Page.ctx.fillRect(this.left, this.top, this.W, this.H),
+      (t = 0.01 * Page.unitSize),
+      (Page.ctx.fillStyle = "rgb(255,232,96)"),
+      (e = Math.floor(this.left + 33 * t)),
+      (i = Math.floor(this.top + this.H - 28 * t)),
+      (r = Math.floor(30 * t)),
+      (s = Math.floor(12 * t)),
+      Page.ctx.fillRect(e, i, r, s),
+      (e = Math.floor(this.left + 42 * t)),
+      (i = Math.floor(this.top + this.H - 50 * t)),
+      (r = Math.floor(12 * t)),
+      (s = Math.floor(32 * t)),
+      Page.ctx.fillRect(e, i, r, s),
+      (e = Math.floor(this.left + 48 * t)),
+      (i = Math.floor(this.top + this.H - 68 * t)),
+      Page.ctx.arc(e, i, 24 * t, 0, Math.PI),
+      Page.ctx.fill(),
+      (text = ("00000000" + GM.ScoreHigh).slice(-7)),
+      (e = this.left + this.W - 4),
+      (i = this.top + 0.8 * Page.unitSize),
+      (size = Math.floor(0.8 * Page.unitSize) + 0.5),
+      DrawText(text, "rgb(255,232,96)", "500", "right", size, e, i);
+  })),
+  (Page.ScoreBarCur = new DrawAreaObj(10.5, 1.1, 4.5, 1, function () {
+    let t, e, i, r, s;
+    (Page.ctx.fillStyle = "rgb(35,36,38)"),
+      Page.ctx.fillRect(this.left, this.top, this.W, this.H),
+      (s = 0.01 * Page.unitSize),
+      (t = ("00" + GM.Level).slice(-2)),
+      (e = this.left + Math.floor(50 * s)),
+      (i = this.top + 0.8 * Page.unitSize),
+      DrawText(
+        t,
+        "rgb(128,128,128)",
+        "900",
+        "center",
+        (r = Math.floor(0.5 * Page.unitSize)),
+        e,
+        i
+      ),
+      (t = ("00000000" + GM.ScoreCur).slice(-7)),
+      (e = this.left + this.W - 4),
+      (i = this.top + 0.8 * Page.unitSize),
+      DrawText(
+        t,
+        "rgb(255,255,255)",
+        "500",
+        "right",
+        (r = Math.floor(0.8 * Page.unitSize) + 0.5),
+        e,
+        i
+      );
+  }));
+let GM = {
+  TimeCur: 0,
+  TimeEvent: 0,
+  TickRate: 0,
+  IsAlive: 0,
+  Level: 0,
+  PiecesRemaining: 0,
+  ScoreHigh: 0,
+  ScoreCur: 0,
+  ScoreBonus: 0,
+  DifficultFlag: 0,
+  StaticUnits: [],
+  Initialize: function () {
+    this.Pc.Next = this.Pc.Cur = this.Pc.ProjY = 0;
+    for (let t = 0; t < 10; t++) {
+      this.StaticUnits[t] = [];
+      for (let e = 0; e < 20; e++) this.StaticUnits[t][e] = 0;
+    }
+    (this.TimeCur = this.TimeEvent = 0),
+      (this.TickRate = 500),
+      (this.PiecesRemaining = 10),
+      (this.Level = 1),
+      (this.ScoreCur = 0),
+      (this.IsAlive = !0);
+  },
+  Update: function () {
+    (this.TimeCur = new Date().getTime()),
+      this.TimeCur >= this.TimeEvent &&
+        (0 === GM.Pc.Cur && this.IsAlive
+          ? this.Pc.Generate()
+          : (this.Pc.DoGravity(),
+            (this.Pc.ProjY = this.Pc.TryProject()),
+            (Page.Game.IsDirty = !0)),
+        this.RefreshTimer());
+  },
+  RefreshTimer: function () {
+    this.TimeEvent = new Date().getTime() + this.TickRate;
+  },
+  PieceSpawned: function () {
+    this.PiecesRemaining--, this.PiecesRemaining <= 0 && this.AdvanceLevel();
+  },
+  AdvanceLevel: function () {
+    this.Level++,
+      (this.TickRate = Math.floor(555 * Math.exp(this.Level / -10))),
+      (this.PiecesRemaining = Math.floor(5e3 / this.TickRate)),
+      (Page.ScoreBarCur.IsDirty = !0);
+  },
+  CheckUnits: function (t) {
+    let e = 0,
+      i = 0,
+      r = [];
+    this.ScoreBonus > 0 && (i += this.ScoreBonus);
+    for (let e = 0; e < 20; e++) t.indexOf(e) >= 0 && r.push(e);
+    for (let t = 0; t < r.length; t++) {
+      let s = !1,
+        a = r[t];
+      for (let t = 0; t < GM.StaticUnits.length; t++)
+        if (0 === GM.StaticUnits[t][a]) {
+          s = !0;
+          break;
+        }
+      if (!1 === s) {
+        for (let t = 0; t < GM.StaticUnits.length; t++)
+          GM.StaticUnits[t].splice(a, 1), GM.StaticUnits[t].unshift(0);
+        (i += 100 + 200 * e), e > 2 && (i += 100), e++;
+      }
+    }
+    1 === this.DifficultFlag &&
+      ((i = Math.floor(1.5 * i)), (this.DifficultFlag = 0)),
+      i > 0 &&
+        ((this.ScoreCur += i),
+        (Page.ScoreBarCur.IsDirty = !0),
+        (this.ScoreBonus = 0),
+        e > 3 && (this.DifficultFlag = 1));
+  },
+  GameOver: function () {
+    (Page.Game.IsDirty = Page.ScoreBarCur.IsDirty = !0),
+      this.ScoreCur > this.ScoreHigh &&
+        ((this.ScoreHigh = this.ScoreCur),
+        (Page.ScoreBarHigh.IsDirty = !0),
+        console.log(this.ScoreHigh)),
+      (this.IsAlive = !1);
+  },
+  PcObj: function (t, e, i) {
+    (this.x = 5),
+      (this.y = 0),
+      (this.color = t),
+      (this.UO = {}),
+      (this.Rotate = function () {
+        this.UO = this.UO.nextUO;
+      }),
+      (this.SetUO = function (t, e) {
+        let i = [];
+        (i[0] = { nextUO: 0, arr: [] }), (i[0].arr = e);
+        for (let r = 0; r < t; r++) {
+          (i[r] = { nextUO: 0, arr: [] }), r > 0 && (i[r - 1].nextUO = i[r]);
+          for (let t = 0; t < e.length; t++) {
+            let s, a;
+            0 === r
+              ? ((s = e[t].x), (a = e[t].y))
+              : ((s = -1 * i[r - 1].arr[t].y), (a = i[r - 1].arr[t].x)),
+              (i[r].arr[t] = { x: s, y: a });
+          }
+        }
+        (i[t - 1].nextUO = i[0]), (this.UO = i[0]);
+      }),
+      this.SetUO(e, i);
+  },
+  O: function () {
+    return new GM.PcObj("rgb(255,232,51)", 1, [
+      { x: -1, y: 0 },
+      { x: 0, y: 0 },
+      { x: -1, y: 1 },
+      { x: 0, y: 1 }
+    ]);
+  },
+  I: function () {
+    return new GM.PcObj("rgb(51,255,209)", 2, [
+      { x: -2, y: 0 },
+      { x: -1, y: 0 },
+      { x: 0, y: 0 },
+      { x: 1, y: 0 }
+    ]);
+  },
+  S: function () {
+    return new GM.PcObj("rgb(106,255,51)", 2, [
+      { x: 0, y: 0 },
+      { x: 1, y: 0 },
+      { x: -1, y: 1 },
+      { x: 0, y: 1 }
+    ]);
+  },
+  Z: function () {
+    return new GM.PcObj("rgb(255,51,83)", 2, [
+      { x: -1, y: 0 },
+      { x: 0, y: 0 },
+      { x: 0, y: 1 },
+      { x: 1, y: 1 }
+    ]);
+  },
+  L: function () {
+    return new GM.PcObj("rgb(255,129,51)", 4, [
+      { x: -1, y: 0 },
+      { x: 0, y: 0 },
+      { x: 1, y: 0 },
+      { x: -1, y: -1 }
+    ]);
+  },
+  J: function () {
+    return new GM.PcObj("rgb(64,100,255)", 4, [
+      { x: -1, y: 0 },
+      { x: 0, y: 0 },
+      { x: 1, y: 0 },
+      { x: 1, y: -1 }
+    ]);
+  },
+  T: function () {
+    return new GM.PcObj("rgb(160,62,255)", 4, [
+      { x: -1, y: 0 },
+      { x: 0, y: 0 },
+      { x: 1, y: 0 },
+      { x: 0, y: -1 }
+    ]);
+  }
+};
+(GM.Pc = {
+  Cur: 0,
+  ProjY: 0,
+  Upcoming: [0, 0, 0],
+  Generate: function () {
+    if (
+      ((this.Cur = this.Upcoming[0]),
+      (this.Upcoming[0] = this.Upcoming[1]),
+      (this.Upcoming[1] = this.Upcoming[2]),
+      0 !== this.Cur)
+    ) {
+      this.CheckCollisions(0, 0, 0) > 0 && (GM.GameOver(), this.Freeze());
+    }
+    if (0 !== GM.IsAlive) {
+      switch (Math.floor(7 * Math.random())) {
+        case 0:
+          this.Upcoming[2] = GM.O();
+          break;
+        case 1:
+          this.Upcoming[2] = GM.I();
+          break;
+        case 2:
+          this.Upcoming[2] = GM.S();
+          break;
+        case 3:
+          this.Upcoming[2] = GM.Z();
+          break;
+        case 4:
+          this.Upcoming[2] = GM.L();
+          break;
+        case 5:
+          this.Upcoming[2] = GM.J();
+          break;
+        case 6:
+          this.Upcoming[2] = GM.T();
+      }
+      0 !== this.Cur && (GM.PieceSpawned(), (Page.Game.IsDirty = !0)),
+        (Page.UpcomingA.IsDirty = Page.UpcomingB.IsDirty = Page.UpcomingC.IsDirty = !0);
+    }
+  },
+  Freeze: function () {
+    if (GM.IsAlive) {
+      var t = [];
+      for (let e = 0; e < this.Cur.UO.arr.length; e++) {
+        let i = this.Cur.x + this.Cur.UO.arr[e].x,
+          r = this.Cur.y + this.Cur.UO.arr[e].y;
+        r >= 0 &&
+          r <= GM.StaticUnits[0].length &&
+          (GM.StaticUnits[i][r] = this.Cur.color),
+          t.indexOf(r) < 0 && t.push(r);
+      }
+      GM.CheckUnits(t), this.Generate();
+    }
+  },
+  DoGravity: function () {
+    if (0 !== this.Cur) {
+      0 === this.CheckCollisions(0, 0, 1) ? this.Cur.y++ : this.Freeze();
+    }
+    GM.RefreshTimer();
+  },
+  TryRotate: function () {
+    if (0 !== this.Cur) {
+      if (0 === this.CheckCollisions(1, 0, 0)) return this.Cur.Rotate(), !0;
+    }
+    return !1;
+  },
+  TryMove: function (t, e) {
+    if (0 !== this.Cur) {
+      if (0 === this.CheckCollisions(0, t, e))
+        return (
+          (this.Cur.x += t),
+          (this.Cur.y += e),
+          e > 0 && (GM.RefreshTimer(), GM.ScoreBonus++),
+          !0
+        );
+    }
+    return !1;
+  },
+  TryDrop: function () {
+    let t = 0;
+    if (0 !== this.Cur) for (; !0 === this.TryMove(0, 1) && t < 22; ) t++;
+    return t > 0 && ((GM.ScoreBonus += 2 * t), this.Freeze(), !0);
+  },
+  TryProject: function () {
+    let t = 0;
+    if (0 !== this.Cur)
+      for (; 0 === this.CheckCollisions(0, 0, t) && t < 22; ) t++;
+    return t - 1;
+  },
+  CheckCollisions: function (t, e, i) {
+    let r,
+      s = 0;
+    r = 1 === t ? this.Cur.UO.nextUO.arr : this.Cur.UO.arr;
+    for (let t = 0; t < r.length; t++) {
+      let a = this.Cur.x + r[t].x + e,
+        n = this.Cur.y + r[t].y + i,
+        h = GM.StaticUnits.length,
+        o = GM.StaticUnits[0].length;
+      if (a < 0 || a >= h || n >= o) return -1;
+      n > 0 && 0 !== GM.StaticUnits[a][n] && s++;
+    }
+    return s;
+  }
+}),
+  document.addEventListener(
+    "keydown",
+    function (t) {
+      let e = event.keyCode || event.which;
+      if (GM.IsAlive) {
+        switch (e) {
+          case 38:
+          case 87:
+            Page.Game.IsDirty = GM.Pc.TryRotate();
+            break;
+          case 37:
+          case 65:
+            Page.Game.IsDirty = GM.Pc.TryMove(-1, 0);
+            break;
+          case 39:
+          case 68:
+            Page.Game.IsDirty = GM.Pc.TryMove(1, 0);
+            break;
+          case 40:
+          case 83:
+            Page.Game.IsDirty = GM.Pc.TryMove(0, 1);
+            break;
+          case 32:
+            Page.Game.IsDirty = GM.Pc.TryDrop();
+        }
+        Page.Game.IsDirty && (GM.Pc.ProjY = GM.Pc.TryProject());
+      } else Init();
+    },
+    !1
+  ),
+  document.body.setAttribute("id", "game");
+let mc = new Hammer(game);
+function Init() {
+  Page.Initialize(), GM.Initialize();
+}
+function Loop() {
+  Page.Update(), GM.IsAlive && GM.Update(), window.requestAnimationFrame(Loop);
+}
+function DrawText(t, e, i, r, s, a, n) {
+  (Page.ctx.font = i + " " + s + 'px sans-serif'),
+    (Page.ctx.textAlign = r),
+    (Page.ctx.fillStyle = e),
+    Page.ctx.fillText(t, a, n);
+}
+function ColorWithAlpha(t, e) {
+  let i = "rgba" + t.substring(3, t.length - 1);
+  return (i += "," + e + ")");
+}
+mc.get("swipe").set({ direction: Hammer.DIRECTION_ALL }),
+  mc.on("swipeleft swiperight swipeup swipedown tap", function (t) {
+    if (GM.IsAlive) {
+      switch (t.type) {
+        case "swipeleft":
+          Page.Game.IsDirty = GM.Pc.TryMove(-1, 0);
+          break;
+        case "swipeup":
+          Page.Game.IsDirty = GM.Pc.TryRotate();
+          break;
+        case "swiperight":
+          Page.Game.IsDirty = GM.Pc.TryMove(1, 0);
+          break;
+        case "swipedown":
+          Page.Game.IsDirty = GM.Pc.TryMove(0, 1);
+          break;
+        case "tap":
+          Page.Game.IsDirty = GM.Pc.TryDrop();
+      }
+      Page.Game.IsDirty && (GM.Pc.ProjY = GM.Pc.TryProject());
+    } else Init();
+  }),
+  (window.onresize = function (t) {
+    Page.WindowChanged();
+  }),
+  Init(),
+  Loop();
+
+        </script>
+        <div id="button">
+          <i class="ri-arrow-up-s-fill"></i>
+          <i class="ri-arrow-left-s-fill"></i>
+          <i class="ri-arrow-right-s-fill"></i>
+          <i class="ri-arrow-down-s-fill"></i>
+        </div>
+        <script src="Script.js"></script>
+    </body>
+</html>

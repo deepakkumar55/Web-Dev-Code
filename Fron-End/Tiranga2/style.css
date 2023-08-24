@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+
+}
+
+#background {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(orange, white, green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    position: relative;
+    height: 90%;
+    overflow: hidden;
+    width: 40%;
+}
+
+#main iframe {
+    height: 105vh;
+    overflow: hidden;
+    width: 150vw;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+#img {
+    transform: translate(-0%, -7%);
+    overflow: hidden;
+    border: 0;
+
+
+}

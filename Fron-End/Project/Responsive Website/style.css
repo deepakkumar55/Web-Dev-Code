@@ -1,0 +1,640 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+}
+
+#page1 {
+    height: 100%;
+    background-image: radial-gradient(circle, aqua, white 30%, rgb(153, 4, 4) 600%);
+    width: 100%;
+}
+
+#nav {
+    position: relative;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+
+}
+
+#nav1 {
+    padding: 2% 7%;
+
+}
+
+#nav1 i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    background-image: linear-gradient(to right, rgba(0, 217, 255, 0.562), rgba(255, 0, 149, 0.589));
+}
+
+#nav2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    padding: 0% 15%;
+
+}
+
+#nav2>h2 {
+    border: 1px solid black;
+    padding: 1% 2%;
+    border-radius: 20px;
+}
+
+#nav2>h2:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#nav2 i {
+    font-size: 40px;
+    display: none;
+}
+
+#learn {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+
+#learn1 {
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+
+#learn1 h1 {
+    position: absolute;
+    font-size: 100px;
+    left: 12%;
+    top: 9%;
+    line-height: 90%;
+
+}
+
+#learn1 p {
+    position: absolute;
+    font-size: 32px;
+    left: 12%;
+    top: 58%;
+
+}
+
+#learn1 button {
+    background-color: #000;
+    position: absolute;
+    font-size: 25px;
+    left: 12%;
+    top: 80%;
+    color: white;
+    padding: 2% 5%;
+    border-radius: 15px;
+}
+
+#learn1 button:hover {
+    background-color: aqua;
+    color: red;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 3% 7%;
+    left: 11%;
+    top: 79%;
+
+}
+
+#learn2 {
+    position: relative;
+    width: 40%;
+    height: 100%;
+}
+
+#img-box {
+    position: relative;
+    background-image: linear-gradient(to right, rgba(0, 217, 255, 0.377), rgba(255, 0, 149, 0.425));
+    width: 80%;
+    height: 50%;
+    border-radius: 60px;
+    top: 40%;
+    left: 5%;
+}
+
+#img-box:hover {
+    cursor: pointer;
+    top: 38%;
+    left: 4%;
+    width: 85%;
+    height: 55%;
+}
+
+#img-box img {
+    position: absolute;
+    bottom: 0%;
+    width: 85%;
+    height: 170%;
+    left: 8%;
+}
+
+#page2 {
+    height: 150%;
+    background-image: radial-gradient(circle, aqua, white 30%, rgb(153, 4, 4) 600%);
+    width: 100%;
+}
+
+#numbers_tell {
+    position: relative;
+    display: flex;
+    height: 50%;
+    width: 100%;
+}
+
+#text1 {
+    width: 40%;
+    padding-left: 7%;
+    padding-right: 5%;
+    padding-top: 8%;
+}
+
+#text1 h1 {
+    font-size: 60px;
+}
+
+#text2 {
+    padding-right: 5%;
+    padding-top: 8%;
+    display: flex;
+    gap: 10%;
+}
+
+.text>h1 {
+    color: rgb(0, 225, 255);
+    font-size: 60px;
+}
+
+.text>p {
+    font-size: 20px;
+}
+
+#info {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info1 {
+    width: 70%;
+    background-image: linear-gradient(to right, rgba(0, 217, 255, 0.39), rgba(255, 0, 149, 0.356));
+    height: 70%;
+    border-radius: 40px;
+    display: flex;
+
+}
+
+#info1-part1 {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+#info1-part1 h1 {
+    font-size: 55px;
+    padding-left: 15%;
+    padding-top: 15%;
+}
+
+#info1-part1 button {
+    position: absolute;
+    font-size: 20px;
+    padding: 1% 5%;
+    top: 70%;
+    left: 15%;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+}
+
+#info1-part1 button:hover {
+    position: absolute;
+    font-size: 25px;
+    padding: 2% 6%;
+    top: 68%;
+    left: 14%;
+    border-radius: 25px;
+    background-color: aqua;
+    color: black;
+    font-weight: 700;
+}
+
+#info1-part2 {
+    width: 50%;
+    height: 100%;
+}
+
+#p1 {
+    display: flex;
+    height: 50%;
+    width: 100%;
+}
+
+#p2 {
+    display: flex;
+    height: 50%;
+    width: 100%;
+}
+
+.text1 {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    padding-top: 12%;
+    padding-left: 5%;
+    padding-right: 4%;
+}
+
+.text2 {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    padding-top: 5%;
+    padding-left: 5%;
+
+    padding-right: 4%;
+}
+
+.text1 i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    background-image: linear-gradient(to right, rgba(0, 217, 255, 0.562), rgba(255, 0, 149, 0.589));
+}
+
+.text1 h1 {
+    font-size: 25px;
+}
+
+.text2 i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    background-image: linear-gradient(to right, rgba(0, 217, 255, 0.562), rgba(255, 0, 149, 0.589));
+}
+
+.text2 h1 {
+    font-size: 25px;
+}
+
+#page3 {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: radial-gradient(circle, aqua, white 30%, rgb(153, 4, 4) 600%);
+    display: flex;
+}
+
+#page3-part1 {
+    position: relative;
+    width: 50%;
+}
+
+#page3-part1>h1 {
+    font-size: 60px;
+    padding-top: 10%;
+    margin: 0% 10%;
+}
+
+#page3-part1>h2 {
+    position: absolute;
+    top: 53%;
+    font-size: 50px;
+    color: rgb(54, 164, 170);
+    margin: 0% 10%;
+}
+
+#page3-part1>h3 {
+    position: absolute;
+    top: 48%;
+    left: 23%;
+    font-size: 40px;
+
+}
+
+#page3-part1>p {
+    position: absolute;
+    font-size: 20px;
+    top: 57%;
+    left: 23%;
+    right: 5%;
+}
+
+#page3-part2 {
+    position: relative;
+    width: 50%;
+}
+
+#page3-content1 {
+    position: relative;
+    height: 50%;
+}
+
+#page3-content1>h2 {
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    font-size: 50px;
+    color: rgb(54, 164, 170);
+
+}
+
+#page3-content1>h3 {
+    position: absolute;
+    top: 45%;
+    left: 23%;
+    font-size: 40px;
+
+}
+
+#page3-content1>p {
+    position: absolute;
+    font-size: 20px;
+    top: 65%;
+    left: 23%;
+    right: 6%;
+}
+
+#page3-content2 {
+    position: relative;
+    height: 50%;
+}
+
+#page3-content2>h2 {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    font-size: 50px;
+    color: rgb(54, 164, 170);
+
+}
+
+#page3-content2>h3 {
+    position: absolute;
+    top: 25%;
+    left: 23%;
+    font-size: 40px;
+    right: 6%;
+
+}
+
+#page3-content2>p {
+    position: absolute;
+    font-size: 20px;
+    top: 60%;
+    left: 23%;
+    right: 6%;
+}
+
+#page4 {
+    height: 100vh;
+    background-image: radial-gradient(circle, aqua, white 30%, rgb(153, 4, 4) 600%);
+    width: 100%;
+}
+
+#stu {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stu1 {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    background-image: linear-gradient(to right, rgba(0, 217, 255, 0.562), rgba(255, 0, 149, 0.589));
+    border-radius: 40px;
+    display: flex;
+
+}
+
+#img-contener {
+    width: 50%;
+
+}
+
+#text-contener {
+    width: 50%;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 4%;
+}
+
+#text-contener>h1 {
+
+    font-size: 65px;
+}
+
+#text-contener>h4 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#text-contener>h5 {
+    font-size: 20px;
+    margin-top: 10%;
+    color: aqua;
+}
+
+#text-contener>p {
+    font-size: 15px;
+    font-weight: 100;
+    margin-top: 2%;
+}
+
+#img-contener img {
+    bottom: 0%;
+    height: 115%;
+    left: 5%;
+    position: absolute;
+}
+
+#page5 {
+    margin: 0;
+    position: relative;
+    height: 100vh;
+    background-image: radial-gradient(circle, aqua, white 30%, rgb(153, 4, 4) 600%);
+    width: 100%;
+}
+
+#page5-text {
+    position: relative;
+    text-align: center;
+    top: 20%;
+}
+
+#page5-text>h1 {
+    margin: 2% 25%;
+    font-size: 70px;
+}
+
+#page5-text>p {
+    margin: 2% 22%;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+#page5-text>button {
+    margin: 2% 22%;
+    font-size: 20px;
+    padding: 1% 5%;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+}
+
+#page5-text>button:hover {
+    margin: 1% 18%;
+    font-size: 35px;
+    padding: 1% 6%;
+    border-radius: 15px;
+    font-weight: 700;
+    background-color: aqua;
+    color: black;
+}
+
+#page6 {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    background-image: radial-gradient(circle, aqua, white 30%, rgb(153, 4, 4) 600%);
+    display: flex;
+    border-top: 1px solid black;
+}
+
+#page6-nav1 {
+    width: 30%;
+    padding: 2% 7%;
+
+
+}
+
+#page6-nav1 i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    background-image: linear-gradient(to right, rgba(0, 217, 255, 0.562), rgba(255, 0, 149, 0.589));
+}
+
+#page6-nav2 {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5%;
+    gap: 1%;
+}
+
+#page6-nav2>h2 {
+    border: 1px solid black;
+    padding: 1% 2%;
+    border-radius: 20px;
+    margin-left: 2%;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+#page6-nav2>h2:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 2% 4%;
+}
+
+
+@media screen and (max-width: 800px) {
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
+    #nav {
+        width: 100vw;
+    }
+
+    #nav2 {
+        justify-content: flex-end;
+        display: flex;
+    }
+
+    #nav2 i {
+        display: flex;
+    }
+
+    #nav2 h2 {
+        display: none;
+    }
+
+    #learn {
+        flex-direction: column;
+        height: 100%;
+        width: 100vw;
+    }
+
+    #learn1 h1 {
+        font-size: 60px;
+    }
+
+    #learn1 p {
+        font-size: 15px;
+
+
+    }
+
+    #learn1 button {
+        font-size: 10px;
+    }
+
+    #leaen2 {
+        width: 40%;
+        height: 100%;
+    }
+}

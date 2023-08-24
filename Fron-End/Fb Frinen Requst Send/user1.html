@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link
+      rel="shortcut icon"
+      href="https://icons.iconarchive.com/icons/yootheme/social-bookmark/256/social-facebook-button-blue-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#background {display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    gap: 20px;
+}
+
+
+
+.card {
+    position: relative;
+    height: 80%;
+    width: 30%;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 2px 2px 25px black;
+}
+
+.img {
+    position: relative;
+    overflow: hidden;
+    height: 50%;
+    width: 100%;
+    background-color: red;
+
+}
+
+.img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card1 {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card1 h1 {
+    font-size: 40px;
+}
+
+.card1 h4 {
+    margin-top: 5px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    opacity: .5;
+    font-weight: 500;
+}
+
+.card1 p {
+    margin-top: 10px;
+    font-size: 20px;
+    opacity: .8;
+    font-weight: 900;
+    width: 80%;
+    text-align: center;
+}
+
+.card1 button {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 25px;
+    padding: 5px 20px;
+    color: green;
+    border: none;
+    border-radius: 20px;
+    filter: drop-shadow(10px 10px 15px rgb(0, 128, 0));
+    background-color: rgb(200, 243, 200);
+}
+    </style>
+</head>
+<body>
+    <div id="background">
+            <div class="card">
+                <div class="img">
+                    <img src="https://i.pinimg.com/564x/34/ee/93/34ee93cf9bf0b5c901bfa71b88bbe0cc.jpg" alt="">
+                </div>
+                <div class="card1">
+                    <h1>Deepak Kumar</h1>
+                    <h4>Engineer</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis provident odio sed consequatur.
+                    </p>
+                    <button><i class="ri-user-add-fill"></i>Add Friend</button>
+                </div>
+        
+            </div>
+    </div>
+</body>
+</html>

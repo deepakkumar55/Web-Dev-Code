@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-color: black;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#background {
+    background-image: url(https://media-exp2.licdn.com/dms/image/C4D1BAQH6jj4Fjem2CA/company-background_10000/0/1648494843074?e=2147483647&v=beta&t=IE4EPeyxEufvjiHsUkRZXWycuI5H1q_HoWoAH0CjiF8);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+#main {
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    background-image: url(https: //images.unsplash.com/photo-1551104083-3b336cfd4dca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG1vcm5pbmclMjBuYXR1cmV8ZW58MHx8MHx8&w=1000&q=80);
+    backgroun
+}

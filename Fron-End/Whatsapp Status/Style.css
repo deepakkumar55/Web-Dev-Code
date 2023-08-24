@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+
+}
+
+#background {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    position: relative;
+    height: 70%;
+    width: 25%;
+    background-color: red;
+    border-radius: 10px;
+}
+
+#img-div {
+    background-color: #fff;
+    height: 170px;
+    width: 170px;
+}

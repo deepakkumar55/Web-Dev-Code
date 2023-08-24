@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+
+}
+
+#background {
+    background-image: linear-gradient(to top right, #528ca5, #5AB8BF, #59C3C5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#background video {
+    position: relative;
+    height: 100%;
+}
+
+#background img {
+    z-index: 10;
+    position: absolute;
+    height: 100%;
+    background-color: red;
+}
+
+#main {
+    position: relative;
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+}
+
+#nav {
+    justify-content: space-between;
+    display: flex;
+    height: 70px;
+    width: 100%;
+}
+
+#nav1 i {
+    position: absolute;
+    font-size: 50px;
+    top: 2%;
+    left: 3%;
+    color: white;
+
+}
+
+#nav1 i:hover {
+    color: yellow;
+    cursor: pointer;
+    font-size: 60px;
+}
+
+#nav1 h2 {
+    position: absolute;
+    font-size: 40px;
+    font-family: "Chiller";
+    color: white;
+    top: 3%;
+    left: 8%;
+    letter-spacing: 2px;
+}
+
+#nav1 h2:hover {
+    color: yellow;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+#nav2 {
+    display: flex;
+    gap: 5%;
+    position: absolute;
+    right: 15%;
+    top: 3%;
+}
+
+#nav2 h2 {
+    font-size: 25px;
+    color: white;
+    padding: 1% 3%;
+    border-radius: 15%;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+#nav2 h2:hover {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: black;
+    cursor: pointer;
+}
+
+#main1 h1 {
+    position: absolute;
+    font-family: "Air Travelers Personal Use";
+    letter-spacing: 10px;
+    font-weight: 500;
+    font-size: 60px;
+    right: 70%;
+    text-align: center;
+    left: 5%;
+    top: 45%;
+    background-color: rgba(255, 255, 255, 0.349);
+}
+
+#main1 p {
+    position: absolute;
+    top: 70%;
+    left: 75%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.342);
+    color: white;
+    width: 22%;
+}
+
+#main1 p:hover,
+h1:hover {
+    color: yellow;
+    cursor: pointer;
+}

@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-color: black;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    background-color: #F0F2F5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+#f {
+    position: relative;
+    top: 20%;
+    left: 22%;
+    background-color: #fa0e0e;
+    height: 56%;
+    width: 100%;
+    border-radius: 12px;
+}
+
+#f form {
+    display: inline;
+    gap: 20%;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    padding: 5%15%;
+}

@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-color: black;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    por
+}
+
+#nav {
+    padding: 1.5% 4%;
+    position: relative;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+
+
+
+}
+
+#part1 {
+
+    display: flex;
+    gap: 10px;
+    display: flex;
+    gap: 40px;
+
+
+}
+
+#nav img {
+    height: 30px;
+    width: 30px;
+}
+
+#nav h4 {
+    border-bottom: 2px solid #fff;
+
+}
+
+#part2 {
+
+    display: flex;
+    gap: 30px;
+
+}
+
+#center {
+    position: relative;
+    overflow: hidden;
+    height: 90%;
+    width: 100%;
+
+}
+
+h4:hover {
+    cursor: pointer;
+    color: red;
+}
+
+#central1 {
+    display: flex;
+    position: relative;
+    height: 50%;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+
+#storie1 {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+}
+
+
+
+#central1 img {
+    height: 80px;
+    width: 80px;
+}
+
+#storie2 {
+    position: absolute;
+    left: 55%;
+    top: 10%;
+    right: 5%;
+    text-align: center;
+}
+
+p {
+    font-family: "Fixedsys";
+    font-size: 24px;
+}
+
+p:hover {
+    color: yellow;
+}
+
+button {
+    color: rgb(241, 241, 241);
+    background-color: rgb(255, 1, 1);
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 2%;
+
+}
+
+button:hover {
+    background-color: rgb(104, 98, 98);
+    color: black;
+
+}
+
+#central1 h2 {
+    font-size: 100px;
+    font-family: "Cooper";
+    color: yellow;
+    text-align: center;
+
+
+}
+
+#central1 h2:hover {
+    cursor: pointer;
+    color: red;
+
+}
+
+#central2 {
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    overflow-x: auto;
+
+}
+
+::-webkit-scrollbar {
+    display: none
+}
+
+
+
+.last {
+    display: flex;
+    width: 120%;
+    height: 340px;
+}
+
+h1 {
+
+    text-align: center;
+    padding-top: 10%;
+    margin-left: 5%;
+    font-family: "Engravers MT";
+}
+
+
+#thor {
+    background-image: url(https://source.unsplash.com/720x600/?code);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+
+
+
+}
+
+#panther {
+    background-image: url(https://source.unsplash.com/720x600/?program);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+
+
+}
+
+#spider {
+    background-image: url(https://source.unsplash.com/720x600/?trick);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+
+}
+
+#captain {
+    background-image: url(https://source.unsplash.com/720x600/?internship);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+
+}
+
+#iron {
+    background-image: url(https://source.unsplash.com/720x600/?web,developer);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+
+}
+
+#hulk {
+    background-image: url(https://source.unsplash.com/720x600/?Code,monster);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+
+}
+
+#thor:hover {
+    background-color: rgba(255, 255, 0, 0.466);
+    background-blend-mode: soft-light;
+
+}
+
+#hulk:hover {
+    background-color: rgba(11, 230, 11, 0.466);
+    background-blend-mode: soft-light;
+
+}
+
+#captain:hover {
+    zoom: 150%;
+    background-color: rgba(25, 0, 255, 0.466);
+    background-blend-mode: soft-light;
+
+}
+
+#iron:hover {
+    zoom: 300%;
+    background-color: rgba(181, 243, 10, 0.466);
+    background-blend-mode: soft-light;
+
+}
+
+#spider:hover {
+    zoom: 200%;
+    background-color: rgba(255, 0, 0, 0.26);
+    background-blend-mode: soft-light;
+
+}
+
+#panther:hover {
+    zoom: 150%;
+    background-color: rgba(255, 94, 0, 0.466);
+    background-blend-mode: soft-light;
+
+}
+
+img {
+    border-radius: 50px;
+}

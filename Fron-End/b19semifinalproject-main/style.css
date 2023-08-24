@@ -1,0 +1,428 @@
+@font-face{
+    src: url("./fonts/DELIRIUM\ NCV.ttf");
+    font-family: "Delirium NCV";
+}
+
+@font-face{
+    src: url("./fonts/Gilroy-Medium.otf");
+    font-family: "Gilroy";
+    font-weight: 400;
+}
+
+@font-face{
+    src: url("./fonts/Gilroy-Regular.otf");
+    font-family: "Gilroy";
+    font-weight: 500;
+}
+
+@font-face{
+    src: url("./fonts/Gilroy-Semibold.otf");
+    font-family: "Gilroy";
+    font-weight: 600;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Gilroy";
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+}
+
+#home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+}
+
+#circle{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    width: 30vw;
+    height: 30vw;
+    background: linear-gradient(to bottom right, rgb(204, 226, 222),rgb(153, 198, 189));
+}
+
+#home img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0%);
+    height: 75%;
+    z-index: 9999;
+}
+
+#nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 50px 0 50px;
+    width: 100%;
+    height: 100px;
+}
+
+#nright{
+    display: flex;
+    align-items: center;
+}
+
+#nright a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;   
+}
+
+#nright i{
+    border-radius: 50%;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    color: #fff;
+}
+
+#home img{
+    filter: drop-shadow(30px 5px 20px rgba(0, 0, 0, 0.365));
+}
+
+#nav h4{
+    font-family: "Delirium NCV";
+    font-size: 30px;
+    font-weight: 100;
+}
+
+#nbottom{
+    position: absolute;
+    top: 100%;
+    left: 50px;
+}
+
+#nbottom a{
+    display: block;
+    text-decoration: none;
+    font-family: "Delirium NCV";
+    color: #000;
+    margin-bottom: 5px;
+    font-weight: 100;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+#home #bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+    padding: 0 50px;
+    z-index: 99999999;
+}
+
+#bleft{
+}
+
+#bleft h4{
+    font-size: 70px;
+    font-weight: 100;
+    letter-spacing: 10px;
+    font-family: "Delirium NCV";
+    line-height: 1;
+}
+
+#bleft h6{
+    opacity: .5;
+    line-height: 1;
+}
+
+#bright a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Delirium NCV";
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 3px;
+}
+
+#bright a i{
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(153, 198, 189);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+}
+
+#second{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f3f3f3;
+}
+
+#stext{
+    padding: 3vw 5vw;
+}
+
+#second h3{
+    font-size: 7vw;
+    line-height: 1;
+    font-family: "Delirium NCV";
+    font-weight: 100;
+}
+
+#second p{
+    width: 40%;
+    line-height: 1;
+    opacity: .5;
+}
+
+#projects{
+    overflow-x: auto;
+    display: flex;
+    gap: 100px;
+    width: 100%;
+    min-height: 60vh;
+    margin-top: 30px;
+    padding: 0 5vw;
+}
+
+.slide img:nth-child(1){
+    filter: grayscale();
+}
+
+.slide img:nth-child(2){
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    clip-path: circle(0% at 100px 100px);
+}
+
+#projects::-webkit-scrollbar{
+    display: none;
+}
+
+#projects .slide{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+    flex-shrink: 0;
+    position: relative;
+    width: 50%;
+    min-height: inherit;
+    overflow: hidden;
+    will-change: transform;
+    transform: skewX(0deg);
+}
+
+.slide img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#projects #sright{
+    width: 50%;
+    min-height: inherit;
+    background-color: yellow;
+}
+
+#third{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+#third #image{
+    width: 20%;
+    height: 70%;
+    background-image: url(https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80);
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+#image h1{
+    position: absolute;
+    bottom: -20%;
+    left: -20%;
+    font-family: Delirium NCV;
+    font-weight: 100;
+    font-size: 15vw;
+    opacity: .3;
+}
+
+#third>h1{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0,-50%);
+    font-size: 8vw;
+}
+
+#third p{
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 30%;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: .4;
+}
+
+#footer{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#fleft{
+    padding: 0 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 60%;
+    min-height: 100vh;
+}
+
+#fleft h3{
+    font-size: 4vw;
+}
+
+#fleft a{
+    font-size: 1vw;
+    margin-top: 20px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.4;
+}
+
+#fleft a:nth-child(2){
+    opacity: 1;
+}
+
+#fright{
+    width: 40%;
+    min-height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1513128034602-7814ccaddd4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80);
+    background-size: cover;
+}
+
+@media(max-width: 500px){
+    #home{
+        position: relative;
+        overflow-x: hidden;
+    }
+    #nav{
+        height: 80px;
+        padding: 0px 20px 0 20px;
+    }
+    #nbottom{
+        left: 20px;
+        top: 90%;
+    }
+
+    #nbottom a{
+        font-size: 17px;
+    }
+
+    #bleft h4{
+        font-size: 17vw;
+    }
+
+    #home #bottom{
+        padding: 0 20px;
+    }
+
+    #circle{
+        width: 80vw;
+        height: 80vw;
+    }
+
+    #second{
+        min-height: 50vh;
+        padding: 10vw 0;
+    }
+
+    #projects{
+        gap: 30px;
+        min-height: 30vh;
+    }
+
+    #projects .slide{
+        width: 90%;
+    }
+
+    #second h3{
+        font-size: 27vw;
+    }
+
+    #second p{
+        width: 100%;
+    }
+
+    #third{
+        min-height: 60vh;
+    }
+
+    #third>h1{
+        font-size: 12vw;
+    }
+
+    #image h1{
+        font-size: 30vw;
+        left: -40%;
+    }
+
+    #third p{
+        width: 60%;
+    }
+
+    #footer{
+        flex-direction: column;
+    }
+    #fleft{
+        width: 100%;
+        min-height: 50vh;
+    }
+    #fright{
+        min-height: 50vh;
+        width: 100%;
+    }
+
+    #fleft h3{
+        font-size: 10vw;
+    }
+
+    #fleft a{
+        font-size: 3vw;
+        margin-top: 10px;
+    }
+    
+}

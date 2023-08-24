@@ -1,0 +1,122 @@
+** {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+
+    width: 100%;
+}
+
+#background {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: burlywood;
+    overflow: hidden;
+}
+
+#img {
+    position: relative;
+    height: 100%;
+    width: 65%;
+    left: 20%;
+    object-fit: cover;
+
+}
+
+#img img {
+    position: absolute;
+    height: 750px;
+    background-size: cover;
+    width: 900px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    top: -10%;
+
+}
+
+#logo {
+    top: 10%;
+    position: absolute;
+    height: 30%;
+    left: 2%;
+    display: flex;
+    gap: 2px;
+
+
+}
+
+#logo img {
+    height: 20%;
+}
+
+#logo h1 {
+    color: white;
+    font-weight: 100;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 5%;
+    left: 100%;
+    font-size: 15px;
+}
+
+#nature {
+    left: 3%;
+    position: relative;
+    position: absolute;
+    top: 30%;
+    width: 40%;
+}
+
+#nature h1 {
+    color: white;
+    font-weight: 900;
+    font-size: 65px;
+    letter-spacing: 15px;
+    padding: 0%5%;
+}
+
+#img1 {
+    z-index: 999;
+    background-color: red;
+    height: 80%;
+    width: 30%;
+    position: absolute;
+    top: 10%;
+    right: 8%;
+}
+
+#img1 img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+}
+
+h2 {
+    font-size: 15px;
+    color: white;
+    z-index: 9999;
+    position: absolute;
+    top: 10%;
+    letter-spacing: 5px;
+    font-weight: 100;
+    left: 15%;
+}
+
+#text h1 {
+    top: 50%;
+    transform: rotate(90deg);
+    font-size: 50px;
+    position: absolute;
+    z-index: 88888888;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 10px;
+    right: -15%;
+
+}

@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#background {
+  width: 100%;
+  display: flex;
+}
+#part1 {
+  position: relative;
+  width: 19%;
+  min-height: 100vh;
+  background-color: #000;
+}
+#nav-part {
+  position: fixed;
+}
+#part1 #img {
+  position: relative;
+  min-height: 36vh;
+  width: 19vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+}
+.img {
+  margin-top: 20px;
+  position: relative;
+  width: 10vw;
+  height: 10vw;
+  background-color: rgb(206, 192, 0);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.img img {
+  position: absolute;
+  left: -20%;
+  height: 100%;
+}
+#img h1 {
+  margin-top: 14px;
+  font-size: 2vw;
+  color: yellow;
+}
+#img h3 {
+  margin-top: 10px;
+  font-size: 1.4vw;
+  color: white;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+#img h3 span {
+  color: orange;
+  font-weight: 900;
+}
+#nav {
+  position: relative;
+  width: 19vw;
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+#nav a {
+  color: white;
+  text-decoration: none;
+  flex-direction: column;
+  font-size: 1.8vw;
+  margin-top: 15px;
+  padding: 2px 20px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 1px 1px white;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+#nav a:hover {
+  cursor: pointer;
+  transition: 1s;
+  box-shadow: -2px -2px 1px 1px white;
+  filter: drop-shadow(2px 1px 5px yellow);
+}
+.nav-color {
+  background-color: orange;
+  color: black;
+}
+#social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  width: 20vw;
+  margin-top: 7px;
+}
+#social a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  margin: 0px 30px;
+}
+#main {
+  overflow: auto;
+  position: relative;
+  width: 81%;
+  overflow: auto;
+}
+/* Home */
+#main1 {
+  overflow: hidden;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  background-image: radial-gradient(circle, aqua, white 90%, aqua);
+}
+
+#hleft {
+  width: 50%;
+  min-height: 100vh;
+  position: relative;
+}
+#hleft img {
+  height: 100%;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(0, 0);
+}
+#hright {
+  width: 50%;
+  min-height: 100vh;
+  position: relative;
+}
+#hright h1 {
+  font-size: 6vw;
+  color: orange;
+  filter: drop-shadow(1px 2px 50px rgb(218, 136, 136));
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  transform: translate(0%, -50%);
+}
+#hright h2 {
+  font-size: 4vw;
+  position: absolute;
+  top: 52%;
+  left: 0%;
+  transform: translate(0%, -50%);
+}
+#hright h2 span {
+  color: orange;
+}
+#hright h3 {
+  font-size: 2vw;
+  position: absolute;
+  top: 60%;
+  left: 0%;
+  transform: translate(0%, -50%);
+}
+
+/* About */
+#main2 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  background-color: #f0f0f0;
+}
+
+#aleft {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+#aright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 50%;
+  min-height: 100vh;
+}
+
+#aimg {
+  height: 60%;
+  width: 60%;
+  position: relative;
+  border-radius: 1vw;
+  filter: drop-shadow(2px 2px 10px white);
+  background-color: #fff;
+}
+
+#aimg img {
+  width: 100%;
+  height: 100%;
+}
+
+#about h1 {
+  text-align: center;
+  font-size: 60px;
+}
+
+#aright p {
+  width: 90%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  font-size: 18px;
+  transform: translate(-50%, -50%);
+}
+#about {
+  position: relative;
+  display: flex;
+  height: 90vh;
+  width: 70%;
+  flex-direction: column;
+}
+#detail {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#detail h1 {
+  font-size: 40px;
+}
+
+/* Resume */
+
+#resume {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+#rpart1 {
+  position: relative;
+  width: 50%;
+  min-height: 100vh;
+}
+#rline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: 8px;
+  height: 90vh;
+  border-radius: 50px;
+  background-color: black;
+}
+#line1:nth-child(1){
+  margin-top: 10vh;
+}
+#line1{
+  width: 9px;
+  border-radius: 50%;
+  margin-top: 20vh;
+  background-color: #fff;
+  height: 9px;
+}
+#rpart2 {
+  position: relative;
+  width: 50%;
+  min-height: 100vh;
+}
+/* Servies */
+
+/* Skills */
+
+/* Projects */
+
+/* Contact */

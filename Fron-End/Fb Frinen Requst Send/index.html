@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#background{
+    display: flex;
+    height: 92%;
+    width: 100%;
+    gap: 20px;
+    background-color: #ccc;
+}
+#part1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+}
+#part2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    position: absolute;
+
+}
+
+
+.card {
+    position: relative;
+    height: 90%;
+    width: 60%;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 2px 2px 25px black;
+}
+
+.img {
+    position: relative;
+    overflow: hidden;
+    height: 50%;
+    width: 100%;
+    background-color: red;
+
+}
+
+.img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card1 {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card1 h1 {
+    font-size: 40px;
+}
+
+.card1 h4 {
+    margin-top: 5px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    opacity: .5;
+    font-weight: 500;
+}
+
+.card1 p {
+    margin-top: 10px;
+    font-size: 20px;
+    opacity: .8;
+    font-weight: 900;
+    width: 80%;
+    text-align: center;
+}
+
+.card1 button {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 25px;
+    padding: 5px 50px;
+    color: green;
+    font-weight: 900;
+    letter-spacing: 5px;
+    border: none;
+    border-radius: 20px;
+    filter: drop-shadow(10px 10px 15px rgb(0, 128, 0));
+    background-color: rgb(200, 243, 200);
+}
+
+
+
+
+</style>
+<body>
+    <div id="background">
+        <div id="part1">
+            <div class="card">
+                <div class="img">
+                    <img src="https://i.pinimg.com/564x/34/ee/93/34ee93cf9bf0b5c901bfa71b88bbe0cc.jpg" alt="">
+                </div>
+                <div class="card1">
+                    <h1>Deepak Kumar</h1>
+                    <h4>Engineer</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis provident odio sed consequatur.
+                    </p>
+                    <button>Friend</button>
+                </div>
+        
+            </div>
+        </div>
+        <div id="part2">
+            <div class="card">
+                <div class="img">
+                  <img
+                    src="https://i.pinimg.com/564x/05/17/4a/05174ac1d06d09f6b83c4e85dd9e743b.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card1">
+                  <h1>RaAj Aryan</h1>
+                  <h4>Photographer</h4>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                    provident odio sed consequatur.
+                  </p>
+                  <button>Friend</button>
+                
+        
+                </div>
+        </div>
+    </div>
+</body>
+</html>

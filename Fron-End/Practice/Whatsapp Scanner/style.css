@@ -1,0 +1,135 @@
+#initial_startup {
+    --startup-background: #f0f2f5;
+    --startup-background-rgb: 240, 242, 245;
+    --startup-icon: #bbc5cb;
+    --secondary-lighter: #8696a0;
+    --primary-title: #41525d;
+    --progress-primary: #00c298;
+    --progress-background: #e9edef
+}
+
+.dark #initial_startup {
+    --startup-background: #111b21;
+    --startup-background-rgb: 17, 27, 33;
+    --startup-icon: #676f73;
+    --primary-title: rgba(233, 237, 239, 0.88);
+    --secondary-lighter: #667781;
+    --progress-primary: #0b846d;
+    --progress-background: #233138
+}
+
+#app,
+body,
+html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden
+}
+
+#app {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+#initial_startup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    background-color: var(--startup-background)
+}
+
+#initial_startup .graphic {
+    margin-top: -40px;
+    color: var(--startup-icon)
+}
+
+#initial_startup .graphic .resume-logo {
+    transform: translateX(calc(50% - 52px / 2))
+}
+
+#initial_startup .graphic::after {
+    position: relative;
+    top: -100%;
+    left: calc(50% - 72px * 2 - 72px / 2);
+    display: block;
+    width: calc(72px * 3);
+    height: 100%;
+    content: '';
+    background: linear-gradient(to right, rgba(var(--startup-background-rgb), .5) 0, rgba(var(--startup-background-rgb), .5) 33.33%, rgba(var(--startup-background-rgb), 0) 44.1%, rgba(var(--startup-background-rgb), 0) 55.8%, rgba(var(--startup-background-rgb), .5) 66.66%, rgba(var(--startup-background-rgb), .5) 100%);
+    opacity: 1;
+    animation: shimmer 1.5s linear .6s infinite
+}
+
+html[dir=rtl] #initial_startup .graphic::after {
+    animation-direction: reverse
+}
+
+@keyframes shimmer {
+    from {
+        left: calc(50% - 72px * 2 - 72px / 2)
+    }
+
+    to {
+        left: calc(50% - 72px / 2)
+    }
+}
+
+#initial_startup .progress {
+    position: relative;
+    width: 420px;
+    height: 3px;
+    margin-top: 40px
+}
+
+#initial_startup .progress progress {
+    vertical-align: top
+}
+
+#initial_startup .main {
+    margin-top: 40px;
+    font-size: 17px;
+    color: var(--primary-title)
+}
+
+#initial_startup .secondary {
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--secondary-lighter)
+}
+
+#initial_startup .secondary span {
+    display: inline-block;
+    margin-bottom: 2px;
+    vertical-align: middle
+}
+
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 3px;
+    margin: 0;
+    color: var(--progress-primary);
+    background-color: var(--progress-background);
+    border: none
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: var(--progress-background)
+}
+
+progress[value]::-moz-progress-bar,
+progress[value]::-webkit-progress-value {
+    background-color: var(--progress-primary);
+    transition: width .45s ease
+}

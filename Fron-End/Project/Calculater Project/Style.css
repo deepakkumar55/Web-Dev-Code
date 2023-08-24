@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500&family=Kalam&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#background {
+    background-color: aliceblue;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    position: relative;
+    height: 94%;
+    width: 31.5%;
+    border: rgb(8, 8, 8) solid 1px;
+    border-radius: 10px 0px 10px 0px;
+    background-color: black;
+    box-shadow: 1px 1px 12px 1px black;
+}
+
+#nav {
+    display: flex;
+    height: 10%;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+#nav i {
+    font-size: 30px;
+    padding-top: 15px;
+    color: white;
+    padding-left: 10px;
+}
+
+#nav h3 {
+    color: white;
+    font-family: 'DynaPuff', cursive;
+    padding-top: 15px;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+#nav h1 {
+    font-size: 13px;
+    padding-left: 35px;
+    padding-top: 35px;
+    font-weight: 900;
+    font-family: 'Kalam', cursive;
+    letter-spacing: 1.5px;
+    color: yellow;
+
+}
+
+#calculate {
+    border-bottom: 1px solid black;
+    height: 15%;
+    text-align: center;
+    margin-top: 23px;
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 15px 25px 10px rgba(0, 0, 0, 0.05), 15px 20px 20px rgba(0, 0, 0, 0.05), inset -10px -10px 15px rgba(255, 255, 255, 0.09);
+    width: 100%;
+}
+
+#table {
+    margin: auto;
+
+}
+
+input {
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #244624;
+    font-size: 34px;
+    height: 100px;
+    width: 95%;
+}
+
+button {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 55px;
+    width: 90px;
+    height: 70px;
+    margin: 6px;
+    padding-left: 2%;
+    text-shadow: -2px -2ppx 5px #fff;
+}
+
+.ops {
+    background-color: rgb(255, 238, 0);
+    color: black;
+    text-shadow: -2px -2ppx 5px rgb(0, 0, 0);
+}
+
+.op {
+    background-color: white;
+    color: black;
+    text-shadow: -2px -2ppx 5px rgb(0, 0, 0);
+}
+
+.o {
+    background-color: red;
+    color: white;
+    text-shadow: -2px -2ppx 5px rgb(0, 0, 0);
+}
+
+
+
+#ops {
+    bottom: 0%;
+    position: absolute;
+    width: 200px;
+}

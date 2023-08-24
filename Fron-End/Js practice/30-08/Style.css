@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#background {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #ccc;
+}
+
+#main1 {
+    height: 60%;
+    width: 20%;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+#main2 {
+    height: 60%;
+    width: 20%;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+#main3 {
+    height: 60%;
+    width: 20%;
+    border-radius: 10px;
+    background-color: #fff;
+}

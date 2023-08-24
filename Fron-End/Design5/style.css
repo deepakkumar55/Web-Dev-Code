@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-color: black;
+
+}
+
+html,
+body {
+    height: 120%;
+    width: 100%;
+}
+
+#background {
+    background-image: linear-gradient(to top right, rgb(238, 207, 207), rgb(114, 174, 241));
+    width: 100%;
+    height: 100%;
+
+}
+
+#main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation-name: raaj;
+    animation-duration: 4s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+#nav {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    gap: 7%;
+    padding: 3%;
+}
+
+#nav>h3 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+#spotlight {
+    position: relative;
+    height: 87%;
+}
+
+
+
+#t1 {
+    position: absolute;
+    text-align: center;
+    left: 22%;
+    top: 5%;
+    line-height: 1;
+
+}
+
+
+#t1>h5 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#t1>h1 {
+    letter-spacing: 5px;
+    font-size: 100px;
+    font-weight: 400;
+    font-family: "Air Travelers Personal Use";
+    animation-name: textcolor;
+    animation-delay: 4s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+
+#t1>h6 {
+    position: absolute;
+    letter-spacing: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    top: 120%;
+    left: 25%;
+}
+
+#t2 {
+    position: absolute;
+    text-align: center;
+    left: 22%;
+    top: 70%;
+    line-height: 1;
+
+}
+
+#t2>h1 {
+    letter-spacing: 5px;
+    font-size: 115px;
+    font-weight: 400;
+    font-family: "Air Travelers Personal Use";
+    animation-name: textcolor;
+    animation-delay: 4s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+#t2>p {
+    position: absolute;
+    top: 200%;
+    left: 40%;
+}
+
+#slideimg {
+    position: relative;
+    position: absolute;
+    z-index: 9;
+    height: 50%;
+    width: 100%;
+    background-color: black;
+    top: 30%;
+}
+
+#imgslide {
+    display: flex;
+    height: 100%;
+    gap: 5px;
+    padding: 0% 5%;
+    animation-name: img;
+    animation-timing-function: linear;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+::-webkit-scrollbar {
+    display: none
+}
+
+#imgslide>img {
+    border-radius: 50px;
+    height: 100%;
+
+
+}
+
+@keyframes img {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-180%);
+    }
+
+}
+
+@keyframes textcolor {
+    from {
+        color: rgb(0, 195, 255);
+
+    }
+
+    to {
+        color: black;
+    }
+}
+
+@keyframes raaj {
+    from {
+        background-color: black;
+        color: white;
+    }
+
+    to {
+        background-image: linear-gradient(to top right, rgb(238, 207, 207), rgb(114, 174, 241));
+        color: black;
+
+    }
+}

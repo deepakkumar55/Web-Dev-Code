@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-color: black;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.384), rgba(0, 128, 0, 0.281), rgba(255, 255, 255, 0.418), rgba(255, 255, 0, 0.384));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main1 {
+    display: flex;
+    background-color: #fff;
+    width: 80%;
+    height: 80%;
+    border: .5px solid black;
+    box-shadow: 0 60px 100px 0 rgba(0, 0, 0, 0.233), 0 60px 100px 0 rgba(0, 0, 0, 0.548);
+}
+
+#part1 {
+    position: relative;
+    width: 50%;
+    height: 100%;
+
+}
+
+#nav {
+    position: relative;
+    display: flex;
+    height: 10%;
+    width: 100%;
+
+}
+
+#nav img {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    height: 90%;
+}
+
+#nav h2 {
+    position: absolute;
+    top: 40%;
+    left: 17%;
+    height: 70%;
+    font-family: "Chiller";
+    font-size: 30px;
+}
+
+#r {
+    position: absolute;
+    height: 100%;
+    left: 85%;
+}
+
+#n {
+    position: absolute;
+    bottom: 73%;
+    left: 35%;
+}
+
+#h {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+#h h1 {
+    font-size: 120px;
+    font-family: "Harrington";
+    font-weight: 500;
+
+}
+
+#h p {
+    position: absolute;
+
+}
+
+#b {
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    display: flex;
+    gap: 10px;
+}
+
+#b button {
+    font-size: 30px;
+    padding: 20% 40%;
+    border-radius: 100%;
+    background-color: #fff;
+}
+
+#part2 {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    background-color: #000;
+
+}
+
+#p1 {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+
+.h {
+    font-size: 18Px;
+    color: #fff;
+    font-family: "Arial";
+    font-weight: 400;
+}
+
+.p {
+    font-size: 9px;
+    font-weight: 600;
+    color: rgb(177, 164, 164);
+    letter-spacing: 2px;
+}
+
+#p2 {
+    position: absolute;
+    top: 22%;
+    left: 20%;
+}
+
+#p3 {
+    position: absolute;
+    top: 33%;
+    left: 20%;
+}
+
+#p4 video {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    height: 200px;
+    width: 200px;
+}
+
+#p5 {
+    position: absolute;
+    top: 78%;
+    left: 20%;
+}
+
+#p6 {
+    position: absolute;
+    top: 95%;
+    left: 20%;
+}
+
+#part3 {
+
+    width: 25%;
+    height: 100%;
+
+}
+
+#t {
+    background-image: url(2.avif);
+    height: 70%;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+#d {
+    position: relative;
+    background-color: orange;
+    height: 30%;
+    width: 100%;
+}
+
+#d h2 {
+    font-size: 25px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    font-weight: 900;
+}
+
+#d p {
+    letter-spacing: 2px;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    font-weight: 100;
+}

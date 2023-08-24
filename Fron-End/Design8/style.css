@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-color: black;
+    background-color: #ffe8e4;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+
+}
+
+#main {
+    width: 100%;
+}
+
+#page1 {
+    height: 100%;
+    width: 100%;
+}
+
+#nav {
+    height: 60px;
+    width: 100%;
+    background-color: red;
+}

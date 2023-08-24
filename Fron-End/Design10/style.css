@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#background {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-blend-mode: soft-light;
+    background-image: linear-gradient(to bottom right, rgba(236, 82, 82, 0.493) 10%, rgba(238, 255, 0, 0.678) 60%, rgba(255, 255, 255, 0.822), rgba(248, 147, 147, 0.226));
+    background-color: rgba(155, 185, 190, 0.521);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#nav {
+    border-bottom: 2px solid black;
+    height: 100px;
+}
+
+#nav1 {
+    display: flex;
+    padding-left: 2%;
+    padding-top: 1%;
+}
+
+#nav1 h2 {
+    font-size: 40px;
+    letter-spacing: 5px;
+    position: absolute;
+    font-family: "Edwardian Script ITC";
+    font-weight: 900;
+    left: 9%;
+    top: 4%;
+
+
+}
+
+#background img {
+    position: absolute;
+    height: 450px;
+
+}
+
+#background img:hover {
+    cursor: pointer;
+    animation-name: rotate;
+    animation-duration: 30s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(90deg);
+    }
+
+    to {
+        transform: rotate(10060deg);
+    }
+}

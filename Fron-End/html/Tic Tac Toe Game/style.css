@@ -1,0 +1,485 @@
+:root {
+  --red: #fc5185;
+  --gray: #364f6b;
+  --light-white: #f0f0f0;
+  --blue: #43dde6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: inherit;
+  font-family: "Righteous", cursive;
+}
+
+body {
+  background: #D3DDDD;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  opacity: 0;
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  color: #1D0AA3;
+  text-shadow: 4px 4px var(--red);
+  font-family: Georgia, serif;
+}
+
+.start {
+  transform: scale(0);
+  width: 25%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Righteous", cursive;
+  letter-spacing: 2px;
+  background: linear-gradient(to right, var(--red) 0%, var(--gray) 100%);
+}
+.start:hover {
+  background: #0CC3CE;
+  color: var(--red);
+  transition: 0.5s ease;
+}
+
+/********************************************* START MENU ANIMATION *********************************************/
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+@keyframes menu {
+  from {
+    top: 40%;
+  }
+  to {
+    top: 5%;
+  }
+}
+
+/********************************************* STYLING NEW BUTTONS *********************************************/
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btn1,
+.btn2 {
+  width: 100px;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 6px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn1 {
+  background: var(--red);
+  font-family: "Righteous", cursive;
+  letter-spacing: 2px;
+}
+
+.btn1:hover {
+  background: #fff;
+  color: var(--red);
+  transition: 0.5s ease;
+}
+
+.btn2 {
+  background: #119780;
+  font-family: "Righteous", cursive;
+  letter-spacing: 2px;
+}
+
+.btn2:hover {
+  background: #fff;
+  color: var(--gray);
+  transition: 0.5s ease;
+}
+
+#btn-icons {
+  margin-left: 5px;
+}
+
+/********************************************* GAME BOARD *********************************************/
+.game {
+  position: absolute;
+  margin-top: 15rem;
+}
+
+.game .board-one {
+  position: fixed;
+}
+
+.game .cell div {
+  background: #9C87C1;
+}
+
+.game div {
+  width: 130px;
+  height: 130px;
+  background: #0A9DDF;
+  margin: 2px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.invisible {
+  transform: scale(0);
+}
+
+/********************************************* RESTART BUTTON ICON *********************************************/
+.restart {
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin-top: 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  background: var(--gray);
+  color: var(--light-white);
+  font-family: "Righteous", cursive;
+  letter-spacing: 2px;
+}
+
+#icon {
+  margin-left: 5px;
+  transition: 0.3s ease;
+}
+.restart:hover{
+  background: blue;
+  color: black;
+  transition: 0.5s ease;
+}
+
+
+#icon.clicked { 
+  transition: 0.3s ease;
+  animation: rotate 0.5s;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/********************************************* STYLING X AND O *********************************************/
+.x,
+.o {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 7rem;
+  font-weight: bold;
+}
+
+.square .x,
+.square .o {
+  cursor: not-allowed;
+}
+
+/********************************************* FORM *********************************************/
+.name {
+  z-index: 1000;
+  top: 32%;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s ease;
+  font-weight: bold;
+  font-family: Georgia, serif;
+}
+
+input[type="text"] {
+  border: none;
+  outline: none;
+  padding: 8px;
+  width: 100%;
+  font-family: Georgia, serif;
+}
+
+input[type="submit"] {
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  background: var(--gray);
+  color: #fff;
+  width: 100%;
+  font-family: Georgia, serif;
+}
+input[type="submit"]:hover{
+  background: #05B2BC;
+  color: black;
+  transition: 0.5s ease;
+}
+
+/******************************************** WHO'S TURN IS IT?  ********************************************/
+#player-turn {
+  float: right;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 2.2rem;
+  font-family: Georgia, serif;
+}
+
+/******************************************** LEFT PLAYER INFORMATION ********************************************/
+.left-title {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  font-size: 1.5rem;
+  font-family: Georgia, serif;
+}
+
+.left-name {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  font-size: 3rem;
+  font-family: serif;
+}
+
+.left-score {
+  position: absolute;
+  top: 60%;
+  left: 12%;
+  font-size: 3.5rem;
+  font-family: Georgia, serif;
+}
+
+/******************************************* RIGHT SIDE INFORMATION ********************************************/
+.right-title {
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  font-size: 1.5rem;
+  font-family: Georgia, serif;
+}
+
+.right-name {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  z-index: 100000;
+  font-size: 3rem;
+  font-family: serif;
+}
+
+.right-score {
+  position: absolute;
+  top: 60%;
+  right: 12%;
+  font-size: 3.5rem;
+  font-family: Georgia, serif;
+}
+
+@media screen and (max-width: 360px) {
+  .game-name {
+    font-size: 3rem;
+  }
+
+  .btn1, .btn2 {
+    font-size: 0.6rem;
+    width: 90px;
+    height:30px;
+  }
+
+  .game td div {
+    width: 70px;
+    height: 70px;
+  }
+
+  .restart {
+    padding: 5px;
+    margin: 0;
+  }
+
+  .name {
+    top: 20%;
+  }
+
+  .start {
+    font-size: 0.62rem;
+  }
+
+  #x,
+  #o {
+    font-size: 2rem;
+  }
+
+  #left-title {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    font-size: 1rem;
+  }
+  
+  #left-name {
+    left: 5%;
+    top: 40%;
+    font-size: 1.5rem;
+  }
+  
+  #left-score {
+    top: 65%;
+    left: 2%;
+    font-size: 1.5rem;
+  }
+
+  #right-title {
+    top: 35%;
+    right: 5%;
+    font-size: 1rem;
+  }
+  
+  #right-name {
+    right: 5%;
+    top: 40%;
+    font-size: 1.5rem;
+  }
+  
+  #right-score {
+    position: absolute;
+    top: 65%;
+    right: 2%;
+    font-size: 1.5rem;
+  }
+
+  #player-turn {
+    margin: 0;
+  }
+  
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .start {
+    width: 30%;
+  }
+
+  .game {
+    margin-top: 18rem;
+  }
+
+  #x,
+  #o {
+    font-size: 2.5rem;
+  }
+
+  #player-turn {
+    font-size: 0.7rem;
+  }
+
+  .restart {
+    font-size: 0.7rem;
+  }
+
+  .game td div {
+    width: 80px;
+    height: 80px;
+  }
+
+  .left-title {
+    left: 5%;
+    font-size: 1rem;
+  }
+
+  .left-name {
+    left: 10%;
+    font-size: 2rem;
+  }
+
+  .left-score {
+    left: 7%;
+    font-size: 2rem;
+  }
+
+  .right-title {
+    right: 5%;
+    font-size: 1rem;
+  }
+
+  .right-name {
+    right: 5%;
+    font-size: 2rem;
+  }
+
+  .right-score {
+    right: 7%;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .game div {
+    width: 100px;
+    height: 100px;
+  }
+
+  .x,
+  .o {
+    font-size: 6rem;
+  }
+
+  .left-title {
+    top: 30%;
+    left: 5%;
+    font-size: 1rem;
+  }
+
+  .left-name {
+    top: 35%;
+    left: 10%;
+    font-size: 2rem;
+  }
+
+  .left-score {
+    left: 7%;
+    font-size: 2rem;
+  }
+
+  .right-title {
+    top: 30%;
+    right: 5%;
+    font-size: 1rem;
+  }
+
+  .right-name {
+    top: 35%;
+    right: 5%;
+    font-size: 2rem;
+  }
+
+  .right-score {
+    right: 7%;
+    font-size: 2rem;
+  }
+}

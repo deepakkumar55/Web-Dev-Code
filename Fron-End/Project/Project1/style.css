@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-color: black;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+}
+
+#nav {
+    position: relative;
+    height: 7%;
+    width: 100%;
+    box-shadow: #000;
+}
+
+#sear {
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    width: 20%;
+}
+
+#search {
+    padding: 3% 100% 3% 10%;
+    border-radius: 50px;
+
+}
+
+#a {
+    position: relative;
+    height: 7%;
+    width: 100%;
+
+}
+
+#a h2 {
+    position: absolute;
+    font-family: "Footlight MT";
+    font-size: 40px;
+    top: 5%;
+    left: 5%;
+}
+
+#b {
+    position: relative;
+    height: 42%;
+    width: 100%;
+    overflow: auto;
+
+}
+
+#b1 {
+    position: relative;
+    gap: 70px;
+    padding: 1% 5%;
+
+    display: flex;
+    height: 100%;
+    width: 400%;
+}
+
+::-webkit-scrollbar {
+    display: none
+}
+
+.marvel {
+    position: relative;
+    border-radius: 25px;
+    background-image: linear-gradient(to top right, red, white, rgb(0, 221, 255));
+    height: 250px;
+    width: 1500px;
+    background-size: cover;
+}
+
+.marvel>img {
+    position: absolute;
+    left: 5%;
+    top: 8%;
+    width: 30%;
+    height: 85%;
+    border-radius: 25px;
+}
+
+.marvel>h1 {
+    /* color: #fff; */
+    font-weight: 600;
+    letter-spacing: 5px;
+    /* font-size: 40px; */
+    position: absolute;
+    top: 8%;
+    left: 40%;
+    font-family: "Lucy Said Ok Personal Use";
+}
+
+
+
+#c {
+    height: 12%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 5%;
+    border-bottom: .5px outset black;
+}
+
+#author {
+    padding: 0% 25%;
+}
+
+#d {
+    /* background-color: rgb(0, 255, 213); */
+    height: 44%;
+    width: 100%;
+}

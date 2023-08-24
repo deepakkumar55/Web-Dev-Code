@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-color: black;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#bg {
+    background-image: radial-gradient(circle, rgb(3, 152, 238), white, red);
+    height: 100%;
+    width: 100%;
+
+}
+
+#main {
+    position: relative;
+    top: 5%;
+    left: 2.5%;
+    background-image: radial-gradient(rgb(22, 184, 233), white);
+    height: 90%;
+    width: 95%;
+    border-radius: 25px;
+    border: .5px solid rgb(0, 0, 0);
+}
+
+#nav {
+    border: .5px solid red;
+    position: relative;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav1 {
+    display: flex;
+}
+
+#nav1 img {
+    position: absolute;
+    height: 90%;
+    top: 10%;
+    left: 4%;
+}
+
+#nav1 h1 {
+    position: absolute;
+    font-size: 40px;
+    top: 50%;
+    left: 10%;
+    font-family: "Harrington";
+}
+
+#nav2 {
+    gap: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0% 5%;
+
+}
+
+#nav2 img {
+
+    height: 40%;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+#main1 {
+    display: flex;
+    height: 80%;
+    width: 100%;
+}
+
+#part1 {
+    height: 100%;
+    width: 50%;
+}
+
+#part2 {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    padding: 2% 0%;
+
+}
+
+#part2 h2 {
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 40px;
+    top: 32%;
+    text-align: right;
+    left: 35%;
+    padding: 0% 10%;
+}
+
+#part2 h1 {
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 45px;
+    top: 52%;
+    text-align: right;
+    left: 18%;
+    padding: 0% 10%;
+}
+
+#part2 p {
+    position: absolute;
+    font-size: 23px;
+    top: 65%;
+    text-align: right;
+    left: 40%;
+    padding: 0% 10%;
+}
+
+#part2 button {
+    position: absolute;
+    font-size: 23px;
+    top: 75%;
+    text-align: right;
+    left: 61%;
+    padding: 1% 5%;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 2px 2px #888888;
+}
+
+#new {
+    position: relative;
+    background-color: white;
+    height: 60%;
+    width: 40%;
+    border-radius: 30px;
+    top: 30%;
+    left: 25%;
+}
+
+#new h3 {
+    position: absolute;
+    top: 73%;
+    left: 15%
+}
+
+#new p {
+    position: absolute;
+    top: 92%;
+    font-size: 10px;
+    font-weight: 100;
+    left: 15%;
+}
+
+#new img {
+    position: absolute;
+    height: 110%;
+    width: 100%;
+    bottom: 28%;
+    border-radius: 3000px 3000px 0px 0px;
+
+}
+
+#new1 {
+    position: absolute;
+    background-color: #fff;
+    height: 25%;
+    width: 10%;
+    z-index: 7;
+    bottom: 30%;
+    left: 28%;
+    border-radius: 10px;
+}
+
+#night {
+    padding: 10%;
+}
+
+.night {
+    color: rgb(2, 2, 87);
+
+
+}
+
+#night h1 {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+#night p {
+    font-size: 15px;
+    font-weight: 100;
+}

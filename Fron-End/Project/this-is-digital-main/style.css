@@ -1,0 +1,817 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@font-face {
+    font-family: Cooper;
+    src: url(./CooperLtBTWXXLight.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: gilroy;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    position: relative;
+    overflow-x: hidden;
+}
+
+#nav {
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 30px;
+    height: 70px;
+    background-color: #fff;
+}
+
+#nav h1 {
+    font-size: 32px;
+    text-transform: lowercase;
+    font-family: Cooper;
+    font-weight: 100;
+}
+
+#nav #part2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+#nav #part2 a {
+    font-size: 18px;
+    color: #000;
+    font-family: Cooper;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+#nav #part2>i {
+    display: none;
+}
+
+#nav #part2 a:nth-last-child(1) {
+    border: 1.5px solid #000;
+    padding: 5px 10px;
+    border-radius: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -webkit-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease;
+    position: relative;
+}
+
+#nav #part2 a:nth-last-child(1) h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 100;
+    position: relative;
+    z-index: 99;
+    font-family: cooper;
+    font-size: 16px;
+}
+
+#hara-effect:hover #hara {
+    left: 0;
+}
+
+#nav #part2 a:nth-last-child(1):hover #hara {
+    left: 0;
+}
+
+#hara {
+    height: 100%;
+    width: 100%;
+    background-color: springgreen;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    -webkit-transition: left 0.4s ease;
+    -o-transition: left 0.4s ease;
+    transition: left 0.4s ease;
+
+}
+
+#nav #part2 a:nth-last-child(1) img {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    height: 23px;
+    margin-left: 10px;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+#page1 h1 {
+    font-family: Cooper;
+    width: 50%;
+    font-weight: 100;
+    font-size: 5.1vw;
+    position: relative;
+    z-index: 99;
+    text-align: center;
+}
+
+#page1 h1::after {
+    content: "";
+    position: absolute;
+    width: 41%;
+    height: 16px;
+    background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+    bottom: -4%;
+    background-size: cover;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+}
+
+#page1 #img1:hover {
+    /* transform: scale(1.6); */
+    margin-top: -15px;
+}
+
+#page1 #img1 {
+    position: absolute;
+    left: 6%;
+    top: 20%;
+    height: 380px;
+    -webkit-transition: margin ease 0.5s;
+    -o-transition: margin ease 0.5s;
+    transition: margin ease 0.5s;
+}
+
+#page1 #img2 {
+    position: absolute;
+    right: 27%;
+    top: 19%;
+    height: 210px;
+}
+
+#page1 #img3 {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    height: 220px;
+}
+
+#page2 {
+    background-color: #11111c;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 70vh;
+    width: 100vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+#page2 h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#page2 h1 {
+    font-family: cooper;
+    font-weight: 500;
+    font-size: 41px;
+    width: 60%;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#page2 h1::after {
+    content: "";
+    position: absolute;
+    height: 60px;
+    z-index: 99;
+    width: 190px;
+    background-image: url(https://thisisdigital.co.uk/dist/images/circle-green.svg);
+    left: 42%;
+    margin-top: -7px;
+    background-size: 99;
+}
+
+#about-us {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 30px;
+    width: 20%;
+    /* background-color: red; */
+}
+
+#about-us h3 {
+    font-weight: 300;
+    margin-right: 20px;
+    font-family: cooper;
+}
+
+#green-effect {
+    /* background-color: red; */
+    padding: 0px 19px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 2px solid #fff;
+}
+
+#about-us img {
+    position: relative;
+    z-index: 99;
+    height: 35px;
+}
+
+#green {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    -webkit-transition: left 0.4s ease;
+    -o-transition: left 0.4s ease;
+    transition: left 0.4s ease;
+    background-color: springgreen;
+    left: -100%;
+}
+
+#green-effect:hover #green {
+    left: 0;
+}
+
+
+@media (max-width:600px) {
+
+    #page1 h1 {
+        font-size: 30px;
+        /* background-color: red; */
+        width: 80%;
+        margin-top: -76%;
+    }
+
+    #page1 h1::after {
+        content: "";
+        position: absolute;
+        width: 37%;
+        height: 12px;
+        background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+        bottom: -6%;
+        background-size: cover;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0);
+            -ms-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+    }
+
+    #page1 #img1 {
+        position: absolute;
+        left: 0%;
+        top: 45%;
+        height: 380px;
+        -o-object-fit: cover;
+           object-fit: cover;
+        width: 100%;
+        -webkit-transition: margin ease 0.5s;
+        -o-transition: margin ease 0.5s;
+        transition: margin ease 0.5s;
+    }
+
+    #page1 #img2 {
+        position: absolute;
+        right: 27%;
+        top: 19%;
+        height: 80px;
+        display: none;
+    }
+
+    #page1 #img3 {
+        position: absolute;
+        right: 10%;
+        bottom: 10%;
+        display: none;
+        height: 80px;
+    }
+
+    #nav {
+        width: 100vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: fixed;
+        z-index: 999;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding: 0 20px;
+        height: 80px;
+        background-color: #fff;
+    }
+
+    #nav h1 {
+        font-size: 26px;
+        text-transform: lowercase;
+        font-family: Cooper;
+        font-weight: 100;
+    }
+
+    #nav #part2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        -webkit-box-align: center;
+
+            -ms-flex-align: center;
+
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    #nav #part2 a {
+        font-size: 18px;
+        color: #000;
+        display: none;
+        font-family: Cooper;
+        text-decoration: none;
+        margin: 0 20px;
+    }
+
+    #nav #part2>i {
+        display: initial;
+        font-size: 22px;
+    }
+
+    #nav #part2 a:nth-last-child(1) {
+        border: 1.5px solid #000;
+        padding: 5px 10px;
+        border-radius: 30px;
+        display: none;
+        overflow: hidden;
+        -webkit-transition: 1s ease;
+        -o-transition: 1s ease;
+        transition: 1s ease;
+        position: relative;
+    }
+
+    #nav #part2 a:nth-last-child(1) h3 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        font-weight: 100;
+        position: relative;
+        z-index: 99;
+    }
+
+    #hara-effect:hover #hara {
+        left: 0;
+    }
+
+    #nav #part2 a:nth-last-child(1):hover #hara {
+        left: 0;
+    }
+
+    #page2 {
+        background-color: #11111c;
+        color: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        height: 70vh;
+        width: 100vw;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    #page2 h4 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        width: 80%;
+        text-align: center;
+    }
+
+    #page2 h1 {
+        font-family: cooper;
+        font-weight: 500;
+        font-size: 20px;
+        width: 80%;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    #page2 h1::after {
+        content: "";
+        position: absolute;
+        height: 38px;
+        z-index: 99;
+        width: 100px;
+        background-image: url(https://thisisdigital.co.uk/dist/images/circle-green.svg);
+        left: 28%;
+        margin-top: -8px;
+        background-size: 99;
+    }
+
+    #about-us {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-top: 50px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        height: 30px;
+        width: 30%;
+        /* background-color: red; */
+    }
+
+    #about-us h3 {
+        font-weight: 300;
+        margin-right: 20px;
+        font-size: 13px;
+        white-space: nowrap;
+        font-family: cooper;
+    }
+
+    #green-effect {
+        /* background-color: red; */
+        padding: 2px 9px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        border-radius: 30px;
+        overflow: hidden;
+        border: 1px solid #fff;
+    }
+
+    #about-us img {
+        position: relative;
+        z-index: 99;
+        height: 15px;
+    }
+
+    #green {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        -webkit-transition: left 0.4s ease;
+        -o-transition: left 0.4s ease;
+        transition: left 0.4s ease;
+        background-color: springgreen;
+        left: -100%;
+    }
+
+    #green-effect:hover #green {
+        left: 0;
+    }
+
+}
+
+#page3 {
+    height: 100vh;
+    width: 100vw;
+
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+#page3-part2 {
+    height: 100vh;
+    width: 50vw;
+    position: relative;
+    padding: 50px 50px;
+}
+
+#page3-part2 h1 {
+    font-size: 4vw;
+    width: 70%;
+    line-height: 4.9vw;
+    position: relative;
+    font-weight: 100;
+    font-family: cooper;
+
+}
+
+#page3-part2 h1::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 16px;
+    background-size: cover;
+    background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+    top: 28%;
+    left: 30%;
+}
+
+#page3-part2 p {
+    font-size: 1.5vw;
+    width: 80%;
+    line-height: 2vw;
+    position: relative;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+}
+
+#koisa-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 20px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+}
+
+#koisa-div h4 {
+    font-size: 20px;
+    margin: 0 20px;
+    font-weight: 500;
+}
+
+#koisa-div img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+#services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 50px;
+    border: 2px solid #000;
+    margin-left: 30px;
+    position: relative;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+#services h5 img {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    margin-top: 8px;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+#services h5 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* position: relative; */
+    z-index: 99;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+}
+
+#services:hover #hara {
+    left: 0;
+}
+
+
+#page3-part1 {
+    height: 100vh;
+    width: 50vw;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+#img-div1 {
+    height: 100vh;
+    width: 30%;
+    position: relative;
+}
+
+#img-div2 {
+    height: 100vh;
+    width: 70%;
+}
+
+#img-div1 img:nth-child(1) {
+    height: 60%;
+    width: 80%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+#img-div1 img:nth-child(2) {
+    height: 30%;
+    width: 80%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-top: 10px;
+}
+
+#img-div2 img:nth-child(1) {
+    height: 30%;
+    width: 90%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+#img-div2 img:nth-child(2) {
+    height: 60%;
+    margin-top: 20px;
+    width: 90%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+#page4 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    padding: 100px 40px 50px 40px;
+}
+
+#page4 h1 {
+    width: 75%;
+    position: relative;
+    font-size: 4vw;
+    text-align: center;
+    font-weight: 100;
+    font-family: cooper;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+}
+
+#elements {
+    height: 60vh;
+    padding: 20px 40px;
+    text-align: center;
+    width: 94vw;
+}
+
+#elements img {
+    height: 50px;
+    margin: 35px 25px;
+}
+
+
+
+
+#page5{
+    height: 100vh;
+    width: 100vw;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .swiper-slide img {
+    width: 80px;
+    height: 80px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .swiper-slide h1 {
+    width: 70%;
+    font-family: cooper; 
+    margin: 20px 0;
+    font-size: 40px;
+
+}
+.swiper-slide h5 {
+    font-family: cooper; 
+    font-size: 30px;
+
+}

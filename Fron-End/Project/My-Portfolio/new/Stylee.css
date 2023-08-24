@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: #ccc;
+}
+#nav {
+  z-index: 999;
+  position: fixed;
+  background-color: #111;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+#npart2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 8%;
+}
+#npart2 a {
+  display: block;
+  text-decoration: none;
+  margin-left: 40px;
+  font-size: 22px;
+  letter-spacing: 2apx;
+  color: white;
+  padding-bottom: 7px;
+  border-radius: 2px;
+}
+#npart2 a:hover {
+  color: orange;
+  border-bottom: 4px solid orange;
+}
+
+.Home {
+  position: relative;
+  top: 100px;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #111;
+}
+
+#hpart1 {
+  position: relative;
+  height: 100%;
+  width: 50%;
+}
+#hpart1 img {
+  left: -10%;
+  position: absolute;
+  height: 100%;
+  width: 120%;
+}
+
+#hpart2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+}
+#hpart2 h6 {
+  position: absolute;
+  left: 7%;
+  top: 20%;
+  font-size: 30px;
+  color: orange;
+}
+#hpart2 h1 {
+  position: absolute;
+  color: white;
+  left: 7%;
+  top: 25%;
+  font-size: 100px;
+}
+#hpart2 h1 span {
+  color: orange;
+}
+#hpart2 h4 {
+  position: absolute;
+  left: 7%;
+  color: white;
+  top: 62%;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+#About {
+  display: flex;
+  height: 120%;
+  width: 100%;
+  background-color: #111;
+  
+}
+#apart1{
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 40%;
+}
+#apart1 img{
+  position: absolute;
+  height: 120%;
+  bottom: -35%;
+  right: -10%;
+}
+
+#apart2{position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 100%;
+  width: 60%;
+}
+#apart2 >h1{
+  position: absolute;
+  top: 17%;
+  font-size: 80px;
+  color: yellow;
+  border-bottom: 2px solid yellow;
+}
+#apart2 p{
+  position: absolute;
+  top: 32%;
+  font-size: 20px;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+#apart2 ul {
+  top: 45%;
+  position: absolute;
+  line-height: 50px;
+}
+#apart2 h1 span{
+  color: orange;
+}
+#apart2 button{
+  position: absolute;
+  top: 89%;
+  border-radius: 20px;
+  background-color: orange;
+  color: antiquewhite;
+  left: 20%;
+  cursor: pointer;
+  padding: 7px 30px;
+  font-size: 30px;
+}
+#Resume{
+  background-color: #111;
+  color: white;
+  height: 100vh;
+  width: 100%;
+
+}

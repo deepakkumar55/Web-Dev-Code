@@ -1,0 +1,557 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-color: black;
+
+
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+
+#nav {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    gap: 20%;
+}
+
+#step1 img {
+    height: 70px;
+    position: absolute;
+
+    left: 5%;
+    top: 1%;
+
+
+}
+
+#nav h2 {
+    position: absolute;
+    left: 15%;
+    font-size: 40px;
+    font-family: "Freestyle Script";
+    font-weight: ;
+    top: 6%;
+}
+
+#nav input {
+    position: absolute;
+    left: 35%;
+    top: 2%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 150px;
+    padding: 1% 5%;
+}
+
+
+#menu h1 {
+    display: flex;
+    position: absolute;
+    left: 80%;
+    top: 2%;
+}
+
+#menu img {
+    position: absolute;
+    left: 88%;
+    height: 35px;
+    top: 2%;
+}
+
+#central2 {
+    position: absolute;
+    height: 85%;
+    width: 100%;
+    overflow-x: auto;
+
+
+}
+
+::-webkit-scrollbar {
+    display: none
+}
+
+
+
+.last {
+    position: absolute;
+    display: flex;
+    width: 250%;
+    top: 30%;
+    padding: 0% 5%;
+    border-radius: 25px;
+    gap: 50px;
+}
+
+
+
+
+#c1 {
+    position: relative;
+    background-image: linear-gradient(yellow, rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+
+}
+
+.i1 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    bottom: 70%;
+    left: 2%;
+
+}
+
+#c1 h2 {
+    position: absolute;
+    color: White;
+    top: 45%;
+    font-size: 38px;
+    left: 1%;
+}
+
+#c1 p {
+    position: absolute;
+    color: White;
+    top: 60%;
+    font-size: 20px;
+    left: 1%;
+}
+
+#c1:hover {
+    background-image: linear-gradient(yellow, rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+    zoom: 130%;
+    cursor: pointer;
+
+}
+
+h2 {
+    position: absolute;
+    left: 10%;
+}
+
+p {
+    position: absolute;
+    left: 10%;
+}
+
+#c2 {
+    position: relative;
+    background-image: linear-gradient(red, rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+
+
+}
+
+#c2:hover {
+    position: relative;
+    background-image: linear-gradient(red, rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+    zoom: 130%;
+    cursor: pointer;
+
+
+}
+
+.i2 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    bottom: 70%;
+    /* left: 12%; */
+
+}
+
+#c2 h2 {
+    position: absolute;
+    color: White;
+    top: 45%;
+    font-size: 38px;
+    /* left: 11%; */
+}
+
+#c2 p {
+    position: absolute;
+    color: White;
+    top: 60%;
+    font-size: 20px;
+    /* left: 11%; */
+}
+
+#c3 {
+    position: relative;
+    background-image: linear-gradient(orange, rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+
+}
+
+#c3:hover {
+    position: relative;
+    background-image: linear-gradient(orange, rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+    zoom: 130%;
+    cursor: pointer;
+
+}
+
+.i3 {
+    position: absolute;
+    height: 200px;
+    width: 250px;
+    bottom: 70%;
+    /* left: 20%; */
+
+}
+
+#c3 h2 {
+    position: absolute;
+    color: White;
+    top: 45%;
+    font-size: 38px;
+    /* left: 22%; */
+}
+
+#c3 p {
+    position: absolute;
+    color: White;
+    top: 60%;
+    font-size: 20px;
+    /* left: 22%; */
+}
+
+#c4 {
+    position: relative;
+    background-image: linear-gradient(rgb(0, 217, 255), rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+
+}
+
+#c4:hover {
+    position: relative;
+    background-image: linear-gradient(rgb(0, 217, 255), rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+    zoom: 130%;
+    cursor: pointer;
+}
+
+.i4 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    bottom: 70%;
+    /* left: 32%; */
+
+}
+
+#c4 h2 {
+    position: absolute;
+    color: White;
+    top: 45%;
+    font-size: 38px;
+    /* left: 31%; */
+}
+
+#c4 p {
+    position: absolute;
+    color: White;
+    top: 60%;
+    font-size: 20px;
+    /* left: 31%; */
+}
+
+#c5 {
+    position: relative;
+    background-image: linear-gradient(rgb(241, 9, 171), rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+
+}
+
+#c5:hover {
+    position: relative;
+    background-image: linear-gradient(rgb(241, 9, 171), rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+    zoom: 130%;
+    cursor: pointer;
+}
+
+.i5 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    bottom: 70%;
+    /* left: 42%; */
+
+}
+
+#c5 h2 {
+    position: absolute;
+    color: White;
+    top: 45%;
+    font-size: 38px;
+    /* left: 41%; */
+}
+
+#c5 p {
+    position: absolute;
+    color: White;
+    top: 60%;
+    font-size: 20px;
+    /* left: 41%; */
+}
+
+#c6 {
+    position: relative;
+    background-image: linear-gradient(rgb(0, 255, 13), rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+
+}
+
+#c6:hover {
+    position: relative;
+    background-image: linear-gradient(rgb(0, 255, 13), rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+    zoom: 130%;
+    cursor: pointer;
+
+}
+
+.i6 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    bottom: 70%;
+    /* left: 52%; */
+
+}
+
+#c6 h2 {
+    position: absolute;
+    color: White;
+    top: 45%;
+    font-size: 38px;
+    /* left: 52%; */
+}
+
+#c6 p {
+    position: absolute;
+    color: White;
+    top: 60%;
+    font-size: 20px;
+    /* left: 52%; */
+}
+
+#c7 {
+    position: relative;
+    background-image: linear-gradient(rgb(13, 173, 221), rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+
+}
+
+#c7:hover {
+    position: relative;
+    background-image: linear-gradient(rgb(13, 173, 221), rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+    zoom: 130%;
+    cursor: pointer;
+
+}
+
+.i7 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    bottom: 70%;
+    /* left: 62%; */
+
+}
+
+#c7 h2 {
+    position: absolute;
+    color: White;
+    top: 45%;
+    font-size: 38px;
+    /* left: 62%; */
+}
+
+#c7 p {
+    position: absolute;
+    color: White;
+    top: 60%;
+    font-size: 20px;
+    /* left: 62%; */
+}
+
+#c8 {
+    position: relative;
+    background-image: linear-gradient(rgb(38, 0, 255), rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+
+}
+
+#c8:hover {
+    position: relative;
+    background-image: linear-gradient(rgb(38, 0, 255), rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+    zoom: 130%;
+    cursor: pointer;
+
+}
+
+.i8 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    bottom: 70%;
+    /* left: 72%; */
+
+}
+
+#c8 h2 {
+    position: absolute;
+    color: White;
+    top: 45%;
+    font-size: 38px;
+    /* left: 72%; */
+}
+
+#c8 p {
+    position: absolute;
+    color: White;
+    top: 60%;
+    font-size: 20px;
+    /* left: 72%; */
+}
+
+#c9 {
+    position: relative;
+    background-image: linear-gradient(rgb(255, 30, 0), rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+
+}
+
+#c9:hover {
+    position: relative;
+    background-image: linear-gradient(rgb(255, 30, 0), rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+    zoom: 130%;
+    cursor: pointer;
+
+}
+
+.i9 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    bottom: 70%;
+    /* left: 82%; */
+
+}
+
+#c9 h2 {
+    position: absolute;
+    color: White;
+    top: 45%;
+    font-size: 38px;
+    /* left: 82%; */
+}
+
+#c9 p {
+    position: absolute;
+    color: White;
+    top: 60%;
+    font-size: 20px;
+    /* left: 82%; */
+}
+
+#c10 {
+    position: relative;
+    background-image: linear-gradient(rgb(10, 210, 245), rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+
+}
+
+#c10:hover {
+    position: relative;
+    background-image: linear-gradient(rgb(10, 210, 245), rgb(228, 228, 209));
+    width: 1000px;
+    height: 300px;
+    border-radius: 25px;
+    zoom: 130%;
+    cursor: pointer;
+
+}
+
+.i10 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    bottom: 70%;
+    /* left: 92 */
+
+}
+
+#c10 h2 {
+    position: absolute;
+    color: White;
+    top: 45%;
+    font-size: 38px;
+    /* left: 92%; */
+}
+
+#c10 p {
+    position: absolute;
+    color: White;
+    top: 60%;
+    font-size: 20px;
+    /* left: 92%; */
+}

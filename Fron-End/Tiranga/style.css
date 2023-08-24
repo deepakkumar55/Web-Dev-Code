@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#background {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: linear-gradient(to top right, rgba(255, 166, 0, 0.61), rgba(255, 255, 255, 0.568), rgba(0, 128, 0, 0.493));
+    overflow: hidden;
+    background-blend-mode: soft-light;
+    background-color: rgba(255, 255, 255, 0.192);
+}
+
+#img-top>img {
+    position: absolute;
+    height: 125px;
+    left: 1%;
+    top: 1%;
+}
+
+#img-top>h2 {
+    position: absolute;
+    left: 20%;
+    top: 5%;
+    font-family: "Cooper";
+    font-size: 32px;
+    background: -webkit-linear-gradient(orange 10%, white 50%, green 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+#img-top>h2:hover {
+    cursor: pointer;
+    font-size: 60px;
+    left: 20%;
+    top: 1%;
+}
+
+#img-bottom>img {
+    position: absolute;
+    height: 125px;
+    right: 1%;
+    bottom: 1%;
+}
+
+#img-bottom>h2 {
+    position: absolute;
+    right: 20%;
+    bottom: 4%;
+    font-family: "Cooper";
+    font-size: 32px;
+    background: -webkit-linear-gradient(orange 10%, white 50%, green 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+#img-bottom>h2:hover {
+    cursor: pointer;
+    font-size: 60px;
+    right: 20%;
+    bottom: 1%;
+}
+
+#main {
+    border: 1px solid white;
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-image: linear-gradient(orange, white, green);
+}
+
+#main img {
+    height: 40%;
+    animation-name: tiranga;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+
+
+
+
+@keyframes tiranga {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

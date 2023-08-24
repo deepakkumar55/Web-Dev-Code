@@ -1,0 +1,23 @@
+.bgcolor {
+    background-color: white;
+}
+
+.d {
+    background-color: blue;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    width: 90vmin;
+    height: 92vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+    border-radius: 10px;
+}
+
+.button {
+    color: white;
+    background-color: black;
+    position: initial;
+}
